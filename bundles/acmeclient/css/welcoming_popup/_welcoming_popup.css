@@ -1,0 +1,362 @@
+.welcoming_popup_background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: #000000b8;
+    z-index: 999;
+}
+
+.welcoming_popup {
+    width: 700px;
+    min-width: 500px;
+    padding: 31px 25px 25px 25px;
+    background: #fff;
+    border-radius: 6px;
+    box-sizing: border-box;
+    z-index: 999;
+}
+
+.welcoming_popup__content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.welcoming_popup .title {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #27AE60;
+}
+
+.welcoming_popup .unit-target .subtitle,
+.welcoming_popup .subtitle {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #333333;
+}
+
+.welcoming_popup .unit-target .subtitle {
+    font-size: 14px;
+}
+
+.--blue-text,
+.welcoming_popup .subtitle.--blue-text {
+    color: #2D9CDB;
+}
+
+.--main-text-color,
+.welcoming_popup .subtitle.--main-text-color {
+    color: #333;
+}
+
+.welcoming_popup .small-text {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 15px;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    color: #000000;
+}
+
+.welcoming_popup .medium-text {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 15px;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    color: #000000;
+}
+
+.welcoming_popup .small-text.--bold {
+    font-weight: bold;
+}
+
+.welcoming_popup .default-button {
+    background-color: #2D9CDB;
+    color: #fff;
+    font-size: 13px;
+    line-height: 1;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 6px 20px 7px;
+    border: none;
+    border-radius: 4px;
+    transition: all .5s;
+}
+
+.welcoming_popup .default-button.--small-button{
+    padding: 6px 9px!important;
+}
+/* SVG START */
+
+/* Светлая картинка */
+.welcoming_popup .mokup-site rect:first-child {
+    fill: #F3F3F3;
+}
+
+.welcoming_popup .mokup-site rect {
+    fill: #E0E0E0;
+}
+
+.welcoming_popup .mokup-site path {
+    fill: #555555;
+}
+/* Темная картинка */
+.welcoming_popup .mokup-site.--dark rect:first-child {
+    fill: #111111;
+}
+
+.welcoming_popup .mokup-site.--dark rect {
+    fill: #555555;
+}
+
+.welcoming_popup .mokup-site.--dark path {
+    fill: #333333;
+}
+
+/* Второй таб START */
+
+/* Аккаунт админа */
+.welcoming_popup .account-admin rect:first-child {
+    fill: #F3F3F3;
+}
+
+.welcoming_popup .account-admin path {
+    fill: #555555;
+}
+
+.welcoming_popup .account-admin rect {
+    fill: #E0E0E0;
+}
+
+/* Аккаунт сотрудника */
+.welcoming_popup .account-staff rect:first-child {
+    fill: #F3F3F3;
+}
+
+.welcoming_popup .account-staff path {
+    fill: #3A88CB;
+}
+
+.welcoming_popup .account-staff rect {
+    fill: #E0E0E0;
+}
+
+/* Центр поддержки */
+.welcoming_popup .help-center rect:first-child {
+    fill: #F3F3F3;
+}
+
+.welcoming_popup .help-center path {
+    fill: #00B257;
+}
+
+.welcoming_popup .help-center rect {
+    fill: #E0E0E0;
+}
+
+.welcoming_popup .help-center rect:last-child {
+    fill: #CA84EB;
+}
+
+/* Второй таб END */
+
+/* SVG END */
+
+/* Иконка выбора START */
+
+.welcoming_popup .unit-icon {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Отображаем иконку при наведении START */
+.welcoming_popup .unit-target:hover .link-icon,
+.welcoming_popup .unit-target:hover .icon-checked {
+    opacity: 1;
+}
+
+.welcoming_popup .unit-target:hover .link-icon i,
+.welcoming_popup .unit-target:hover .icon-checked i {
+    opacity: 1;
+}
+/* Отображаем иконку при наведении END */
+
+.welcoming_popup .icon-checked {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all ease-in-out 0.2s;
+}
+
+.welcoming_popup .icon-checked i {
+    color: #BDBDBD;
+    font-size: 34px;
+    opacity: 0;
+    transition: all ease-in-out 0.2s;
+}
+
+/* Активный элемент START */
+.welcoming_popup .content-unit.-js-active .icon-checked {
+    background: #00b257;
+    opacity: 1;
+}
+
+.welcoming_popup .content-unit.-js-active i {
+    color: #fff;
+    opacity: 1;
+}
+
+.welcoming_popup .content-unit.-js-active .subtitle {
+    color: #000;
+}
+/* Активный элемент END */
+
+/* Иконка выбора END */
+
+.welcoming_popup .you-there {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 80px;
+    height: 55px;
+    border-radius: 4px;
+    background: #fff;
+    transition: all ease-in-out 0.2s;
+}
+
+.welcoming_popup .you-there i {
+    font-size: 17px;
+    padding-bottom: 5px;
+}
+
+.welcoming_popup .link-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #fff;
+    transition: all ease-in-out 0.2s;
+    opacity: 0;
+}
+
+.welcoming_popup .link-icon i {
+    font-size: 24px;
+    color: #BDBDBD;
+    opacity: 0;
+}
+
+.welcoming_popup .welcoming_popup__content.__two .content-unit {
+    width: 315px;
+}
+
+.welcoming_popup .welcoming_popup__content.__three .content-unit {
+    width: 210px;
+}
+
+.welcoming_popup .unit-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 45px;
+    background: #F3F3F3;
+    border-radius: 4px;
+    padding-right: 15px;
+    padding-left: 15px;
+    transition: all ease-in-out 0.2s;
+}
+
+.welcoming_popup .unit-list i {
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    color: #BDBDBD;
+    transition: all ease-in-out 0.2s;
+}
+
+.welcoming_popup .unit-list:hover {
+    color: #2D9CDB;
+}
+
+.welcoming_popup .unit-list:hover i {
+    color: #2D9CDB;
+}
+
+.welcoming_popup_background .dots {
+    width: 14px;
+    min-width: 14px;
+    max-width: 14px;
+    height: 14px;
+    min-height: 14px;
+    max-width: 14px;
+    padding: 0;
+    background: #B4B4B4;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all ease-in-out 0.2s;
+}
+
+.welcoming_popup_background .dots:hover {
+    background: #ccc;
+}
+
+.welcoming_popup_background .dots.-js-active {
+    background: #FFFFFF;
+}
+
+
+.welcoming_popup .tab {
+    display: none;
+}
+
+.welcoming_popup .tab.-js-active {
+    display: block;
+}
+
+button::-moz-focus-inner {
+    border: 0;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .default-button {
+        margin: 0;
+        height: 26px;
+    }
+}
+/**/

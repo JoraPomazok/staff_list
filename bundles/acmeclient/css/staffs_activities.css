@@ -1,0 +1,206 @@
+.content-wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.show_more_records {
+    flex: 1;
+}
+
+#staffs_activities {
+    /*width: 693px;*/
+    /*padding: 0 16px 6px 16px;*/
+}
+
+#staffs_activities a {
+    color: #2d9cdb;
+    text-decoration: none;
+}
+
+#staffs_activities .activity {
+    padding: 4px 15px;
+}
+
+#staffs_activities .activity:first-child {
+    padding-text: 12px;
+}
+
+#staffs_activities .activity .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    text-align: center;
+    float: left;
+    margin-top: 3px;
+}
+
+#staffs_activities .activity .icon i {
+    font-size: 17px;
+    color: #FFFFFF;
+    /*padding-top: 6px;*/
+    /*width: 31px;*/
+}
+
+/* равняем иконки */
+
+#staffs_activities .activity .icon .fa fa-ellipsis-v,
+#staffs_activities .activity .icon .fa-flag {
+    font-size: 15px;
+}
+
+#staffs_activities .activity .icon_status,
+#staffs_activities .activity .icon_group_id,
+#staffs_activities .activity .icon_staff_id,
+#staffs_activities .activity .icon_priority,
+#staffs_activities .activity .icon_labels,
+#staffs_activities .activity .icon_response_changed,
+#staffs_activities .activity .icon_note_changed {
+    background-color: #83c3ea;
+}
+
+#staffs_activities .activity .icon_add_note,
+#staffs_activities .activity .icon_add_chat_note
+{
+    background-color: #F4CF53;
+}
+
+#staffs_activities .activity .icon_add_message,
+#staffs_activities .activity .icon_add_chat_message {
+    background-color: #6fcf97;
+}
+
+#staffs_activities .activity .icon_staff_login,
+#staffs_activities .activity .icon_staff_online,
+#staffs_activities .activity .icon_staff_real_online {
+    background-color: #ACD588;
+}
+
+#staffs_activities .activity .icon_staff_logout,
+#staffs_activities .activity .icon_staff_offline,
+#staffs_activities .activity .icon_staff_real_offline,
+#staffs_activities .activity .icon_staff_offline_auto
+{
+    background-color: #e0e0e0;
+}
+
+#staffs_activities .activity .icon_response_deleted,
+#staffs_activities .activity .icon_note_deleted {
+    background-color: #FC8989;
+}
+
+#staffs_activities .activity .event {
+    padding-left: 40px;
+}
+
+#staffs_activities .activity .event .name {
+    /* font-family: 'helveticaneuecyrbold'; */
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#staffs_activities .activity .event .name span {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 13px;
+    color: #767677;
+}
+
+#staffs_activities .activity .event .event_content {
+    /*width: 525px;*/
+}
+
+#staffs_activities .activity .date {
+    /*font-family: 'helveticaneuecyrbold';*/
+    font-weight: bold;
+    font-size: 13px;
+    float: right;
+    color: #828282;
+    margin-top: -18px;
+}
+
+.show_more_records {
+    width: 100%;
+    height: 41px;
+    /*border-top: 1px solid #e6e6e6;*/
+    background: #e9e9e9;
+    color: #2d9cdb;
+    text-align: center;
+    line-height: 41px;
+    cursor: pointer;
+}
+
+.ico_unload_export {
+    display: none;
+    width: 25px;
+    min-width: 25px;
+    max-width: 25px;
+    height: 25px;
+    min-height: 25px;
+    max-height: 25px;
+    border: 1px solid #E0E0E0;
+    border-radius: 2px;
+    background: #fff;
+    font-family: FontAwesome;
+    font-size: 14px;
+    color: #767677;
+    float: left;
+    outline: none;
+    line-height: 25px;
+    text-decoration: none;
+    text-align: center;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.ico_unload_export.disabled {
+    cursor: not-allowed;
+    background: #f6f6f6;
+}
+.ico_unload_export span.tt {
+    line-height: 20px;
+    right: auto;
+    background: #FCF4DB;
+    border: 1px solid #E0E0E0;
+    box-sizing: border-box;
+    border-radius: 2px;
+    padding: 3px 10px;
+    width: 200px;
+    display: none;
+    font-size: 12px;
+    position: absolute;
+    top: 60px;
+    z-index: 500;
+    font-weight: normal;
+    color: #000;
+    text-align: left;
+    display: block;
+    width: 220px;
+    margin-top: -29px;
+    margin-left: -1px;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+.ico_unload_export i {
+    vertical-align: -1px;
+    padding-left: 1px;
+}
+
+.sidebar nav ul li a .fa.fa-heartbeat {
+    line-height: 30px !important;
+}
+
+notify .user-thmb {
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+    border-radius: 50%;
+    margin-top: -2px;
+}
+
+notify {
+    color: #24669f !important;
+}

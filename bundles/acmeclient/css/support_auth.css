@@ -1,0 +1,56 @@
+@charset "utf-8";
+/* CSS Document */
+
+.content div.heading {
+	padding-bottom:0;
+	border-bottom:none;
+	background:#fff;
+}
+.content div.heading a {
+	color:#3472a6;
+}
+.migration {
+	display: flex;
+	padding: 0 15px;
+}
+.migration > div {
+	/*height:81px;*/
+	/*box-sizing:border-box;*/
+	background:#f6f6f6;
+	/*border:1px solid #E9E9E9;*/
+	/*border-radius:4px;*/
+	/*padding:19px 0 18px 0;*/
+	/*cursor:pointer;*/
+	/*transition: background .5s ease-out;*/
+}
+.migration h4, .migration p {
+	text-align:center;
+	font-size:14px;
+	color:#343c44;
+}
+.migration p {
+	margin-top:7px;
+	font-weight: normal;
+}
+.migration > div:hover {
+	/*border:2px solid #E9E9E9;*/
+	/*padding:18px 0 17px 0;*/
+	/*background:#fff;*/
+}
+.migration > div.active {
+	/*border:2px solid #2D9CDB;*/
+	/*padding:18px 0 17px 0;*/
+	/*background:#fff;*/
+}
+
+
+@media (max-width: 768px) {
+	.auth-input > .-col-2,
+	.auth-input.-col-2 {
+		width: 100%;
+	}
+
+	#generate_new_jwt_market {
+		width: auto;
+	}
+}

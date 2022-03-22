@@ -1,0 +1,27 @@
+.ck_editor-signature {
+	padding: 0 !important;
+}
+.ck_editor-signature textarea{
+	width: 98%;
+	height: 72px;
+	border: none ;
+
+}
+
+.ck_editor-signature .redactor-layer {
+	border: none !important;
+}
+
+.timeZone {
+	position: relative;
+}
+
+/*.timeZone__subtitle {*/
+/*	position: absolute;*/
+/*}*/
+
+main.settings-smarttips__wrapper .wrapper--list_lang_form {
+	position: absolute;
+	right: 0;
+	top: 0;
+}

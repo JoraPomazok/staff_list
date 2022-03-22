@@ -1,0 +1,64 @@
+.pp_help_body{
+	width:494px;
+}
+.pp_help_body .pp_heading{margin-bottom:13px;}
+.pp_help_body label input,
+.pp_help_body label textarea{
+	display:block;
+}
+
+.pp_help_body label{
+	display: flex;
+	position:relative;
+}
+
+.pp_help_body label .text{line-height:17px;}
+@media all and (-webkit-min-device-pixel-ratio:0) {.pp_help_body label .text{line-height:16px;}}
+
+.pp_help_body label textarea{
+	padding-top:6px;
+	padding-right:9px;
+	height:136px;
+	width:474px;
+}
+@media all and (-webkit-min-device-pixel-ratio:0) {.pp_help_body label textarea{height:138px;}}
+.pp_help_body input.btn,
+.pp_help_body button{
+	border:none;
+	padding-right:12px;
+	padding-left:12px;
+	padding-top:0;
+	padding-bottom:0;
+	height:27px;
+	width:auto;
+	line-height:27px;
+	margin:25px auto 0;
+}
+@media all and (-webkit-min-device-pixel-ratio:0) {.pp_help_body input.btn{margin-bottom:-1px;padding-right:15px;padding-left:15px;}}
+
+.pp_help_body input.btn[disabled="disabled"]{background:#e0e0e0;cursor:not-allowed;}
+
+.pp_help_body .errorTip{top:-9px;text-indent:5px;}
+@media all and (-webkit-min-device-pixel-ratio:0) {.pp_help_body .errorTip{top:-10px;}}
+
+.pp_help_body button{
+    background-color: #d6d6d6;
+    color: #fff;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.pp_help_body .error,
+.pp_help_body .error:focus{
+    border-color: #F79999 !important;
+}
+
+.choices__item.choices__item--choice.-tomato,
+.-tomato {
+	color: rgb(239, 63, 63) !important;
+}
+
+a.-spin-button {
+	background: #e0e0e0;
+}

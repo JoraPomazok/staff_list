@@ -1,0 +1,27 @@
+.la_item .la_li_lst .icheckbox_square-blue,
+.la_item .la_li_lst .iradio_square-blue,
+.agList .icheckbox_square-blue,
+.agList .iradio_square-blue,
+.hourBody .la_li_lst .icheckbox_square-blue,
+.hourBody .la_li_lst .iradio_square-blue,
+.fields .row .iradio_square-blue,
+.checked_ssl .icheckbox_square-blue{
+	margin-right:5px;
+	top:2px;
+}
+.la_item ul .icheckbox_square-blue,
+.la_item ul .iradio_square-blue,
+.fields .row .iradio_square-blue{top:3px;}
+.sf .iradio_square-blue,
+.rating_radio .iradio_square-blue,
+.formFooter .icheckbox_square-blue,
+.addEmail .row .iradio_square-blue,
+.ideasList .row .iradio_square-blue,
+.h_day .icheckbox_square-blue,
+.twit_settings .fields .row .icheckbox_square-blue{margin-right:1px;top:2px;}
+.fb_settings .fields .row .icheckbox_square-blue{top:4px;margin-right:1px;}
+.w_groupList .icheckbox_square-blue{
+	left: 8px;
+    position: absolute !important;
+    top: 13px;
+}

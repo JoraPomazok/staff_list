@@ -1,0 +1,671 @@
+
+/*	scms	jquery.plugins.css	*/
+
+/* css for timepicker */
+.ui-timepicker-div .ui-widget-header { margin-bottom: 8px; }
+.ui-timepicker-div dl { text-align: left; }
+.ui-timepicker-div dl dt { height: 25px; margin-bottom: -25px; }
+.ui-timepicker-div dl dd { margin: 0 10px 10px 65px; }
+.ui-timepicker-div td { font-size: 90%; }
+.ui-tpicker-grid-label { background: none; border: none; margin: 0; padding: 0; }
+
+/* jQuery UI Tooltip @VERSION  http://docs.jquery.com/UI/Tooltip#theming  */
+.ui-tooltip {
+	padding:8px;
+	position:absolute;
+	z-index:9999;
+	-o-box-shadow: 0 0 5px #aaa;
+	-moz-box-shadow: 0 0 5px #aaa;
+	-webkit-box-shadow: 0 0 5px #aaa;
+	box-shadow: 0 0 5px #aaa;
+}
+/* Fades and background-images don't work well together in IE6, drop the image */
+* html .ui-tooltip {
+	background-image: none;
+}
+body .ui-tooltip { border-width:2px; }
+
+/* css3 drop shadow */  
+.ui-dialog{
+	-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);  
+	-moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);  
+	/*filter: progid:DXImageTransform.Microsoft.dropShadow(color=#888, offX=-10px, offY=0, positive=true);*/
+}
+.ui-widget-overlay{
+	filter:alpha(opacity=30) !important;
+	opacity:0.3 !important;
+	background:#fff no-repeat !important;
+	position:fixed !important;
+	z-index: 99;
+}
+.cms_rtl .ui-dialog-titlebar,
+.cms_rtl .ui-dialog-content{
+	direction:rtl;
+}
+.cms_rtl .ui-dialog-title{
+	float:right !important;
+	padding-right:0;
+	margin-right:0;
+	text-align:right;
+	direction:rtl;
+}
+.cms_rtl .ui-dialog .ui-dialog-titlebar-close{
+	position:absolute;
+	left:3px;
+	right:auto;
+	top:12px;
+}
+.ui-dialog .ui-dialog-buttonpane button{
+	float:right !important;
+}
+.cms_rtl .ui-dialog-buttonpane button{
+	float:left !important;
+}
+
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
+	float:none;
+}
+
+
+
+
+.ui-widget-content{
+	color:inherit !important;
+	font-size:inherit !important;
+	font-family:inherit !important;
+}
+
+
+/*				AutoCommplete			*/
+.ac_results {
+	padding: 0px;
+	border: 1px solid black;
+	background-color: white;
+	overflow: hidden;
+	z-index: 99999;
+}
+
+.ac_results ul {
+	width: 100%;
+	list-style-position: outside;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.ac_results li {
+	margin: 0px;
+	padding: 2px 5px;
+	cursor: default;
+	display: block;
+	/* 
+	if width will be 100% horizontal scrollbar will apear 
+	when scroll mode will be used
+	*/
+	/*width: 100%;*/
+	font: menu;
+	font-size: 12px;
+	/* 
+	it is very important, if line-height not setted or setted 
+	in relative units scroll will be broken in firefox
+	*/
+	line-height: 16px;
+	overflow: hidden;
+}
+
+.ac_loading {
+	background: white url('/app_themes/admin/images/icons/icon_ajax.gif') right center no-repeat;
+}
+
+.ac_odd {
+	background-color: #eee;
+}
+
+.ac_over {
+	background-color: #0A246A;
+	color: white;
+}
+
+/*
+ * CSS Styles that are needed by jScrollPane for it to operate correctly.
+ *
+ * Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane
+ * may not operate correctly without them.
+ */
+
+.jspContainer{
+	overflow: hidden;
+	position: relative;
+	/*direction:ltr;*/
+}
+.jspPane{
+	position: absolute;
+	z-index:1;
+}
+.cms_rtl .jspPane{
+	position: absolute;
+}
+.jspVerticalBar{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 15px;
+	height: 100%;
+	/*background: #fff;*/
+	z-index:3;
+}
+.cms_rtl .jspVerticalBar{
+	direction:rtl;
+	right: auto;
+	left: 0;
+}
+.jspHorizontalBar{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 15px;
+	/*background: #fff;*/
+	z-index:2;
+}
+.cms_rtl .jspHorizontalBar{
+	direction:rtl;
+	left: auto;
+	right: 0;
+}
+.jspVerticalBar *,.jspHorizontalBar *{
+	margin: 0;
+	padding: 0;
+}
+.jspCap{
+	display: none;
+}
+.jspHorizontalBar .jspCap{
+	float: left;
+}
+.cms_rtl .jspHorizontalBar .jspCap{
+	float: right;
+}
+.jspTrack{
+	background: #dde;
+	background: #eee;
+	background-color: transparent;
+	filter:alpha(opacity=40) !important;
+	opacity:0.4 !important;
+	position: relative;
+}
+.jspDrag{
+	background: #bbd;
+	background: #666;
+	position: relative;
+	top: 0;
+	left: 0;
+	cursor: default;
+}
+.cms_rtl .jspDrag{
+	left: auto;
+	right: 0;
+}
+.jspArrow{
+	background: #50506d;
+	text-indent: -20px;
+	display: block;
+	cursor: pointer;
+}
+.jspArrow.jspDisabled{
+	cursor: default;
+	background: #80808d;
+}
+.jspVerticalBar .jspArrow{
+	height: 9px;
+}
+.jspHorizontalBar .jspArrow{
+	width: 9px;
+	float: left;
+	height: 100%;
+}
+.cms_rtl .jspHorizontalBar .jspArrow{
+	float: right;
+}
+.jspVerticalBar .jspArrow:focus{
+	outline: none;
+}
+.jspCorner{
+	background: #eeeef4;
+	background-color: transparent;
+	float: left;
+	height: 100%;
+}
+.cms_rtl .jspCorner{
+	float: right;
+}
+.jspHorizontalBar > .jspTrack, .jspHorizontalBar > .jspTrack > .jspDrag{
+	float: left;
+	height: 100%;
+}
+.cms_rtl .jspHorizontalBar > .jspTrack, .cms_rtl .jspHorizontalBar > .jspTrack > .jspDrag{
+	float: right;
+}
+.jspHorizontalBar > .jspTrack-hover, .jspVerticalBar > .jspTrack-hover{
+	background: #dfdfdf;
+}
+.jspTrack-hover > .jspHover{
+	background: #333;
+}
+/*	ver	*/
+.jspVerticalBar > .jspTrack{
+	border-left:1px transparent solid;
+	border-right:1px transparent solid;
+	width:7px;
+	float: right;
+}
+.cms_rtl .jspVerticalBar > .jspTrack{
+	/*border-left:none;
+	border-right:1px transparent solid;*/
+	float: left;
+}
+.jspVerticalBar > .jspTrack-hover{
+	border-left: 1px #888 solid;
+	border-right:1px #888 solid;
+}
+.cms_rtl .jspVerticalBar > .jspTrack-hover{
+	/*border-left:none;
+	border-right: 1px #888 solid;*/
+}
+.jspVerticalBar .jspDrag{
+	width:9px !important;
+	left:-1px;
+
+	border-color: #c2c2c2;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	border-radius: 4px;
+	-moz-border-top-left-radius: 5px;
+	-webkit-border-top-left-radius: 6px;
+	-khtml-border-top-left-radius: 6px;
+	border-top-left-radius: 5px;
+	-moz-border-bottom-left-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-khtml-border-bottom-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+.cms_rtl .jspVerticalBar > .jspTrack > .jspDrag{
+	left:auto;
+	right:-1px;
+
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	border-radius: 4px;
+	-moz-border-top-right-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-khtml-border-top-right-radius: 5px;
+	border-top-right-radius: 5px;
+	-moz-border-bottom-right-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-khtml-border-bottom-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+/*	hor	*/
+.jspHorizontalBar > .jspTrack{
+	border-top:1px transparent solid;
+	border-bottom:1px transparent solid;
+	height:7px;
+	margin:6px 0 0 0 ;
+}
+.jspHorizontalBar > .jspTrack-hover{
+	border-top: 1px #888 solid;
+	border-bottom: 1px #888 solid;
+}
+.jspHorizontalBar > .jspTrack > .jspDrag{
+	height:9px !important;
+	top:-1px;
+
+	border-color: #c2c2c2;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	border-radius: 4px;
+	-moz-border-top-right-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-khtml-border-top-right-radius: 5px;
+	border-top-right-radius: 5px;
+	-moz-border-top-left-radius: 5px;
+	-webkit-border-top-left-radius: 5px;
+	-khtml-border-top-left-radius: 5px;
+	border-top-left-radius: 5px;
+}
+
+/* Yuk! CSS Hack for IE6 3 pixel bug :( */
+* html .jspCorner{
+	margin: 0 -3px 0 0;
+}
+
+
+/* checkbox	*/
+.jquery-checkbox       {display: inline; font-size: 20px; line-height: 20px; cursor: pointer;}
+.jquery-checkbox .mark {display: inline;}
+
+.jquery-checkbox img {vertical-align: middle; width: 60px; height: 20px;}
+.jquery-checkbox img{background: transparent url(/app_themes/admin/images/inputs/checkbox.png) no-repeat;}
+
+.jquery-checkbox img{
+	background-position: 0px 0px;
+}
+.jquery-checkbox-hover img{
+	background-position: 0px -20px;
+}
+.jquery-checkbox-checked img{
+	background-position: 0px -40px;
+}
+.jquery-checkbox-checked .jquery-checkbox-hover img {
+	background-position: 0px -60px;
+}
+
+.jquery-checkbox-disabled img{
+	background-position: 0px -80px;
+}
+.jquery-checkbox-checked .jquery-checkbox-disabled img{
+	background-position: 0px -100px;
+}
+
+
+
+.jquery-safari-checkbox {display: inline; font-size: 16px; line-height: 16px; cursor: pointer; cursor: hand;}
+.jquery-safari-checkbox .mark {display: inline;}
+
+.jquery-safari-checkbox img {vertical-align: middle; width: 16px; height: 16px;}
+.jquery-safari-checkbox img{background: transparent url(/app_themes/admin/images/inputs/checkbox-safari.png) no-repeat;}
+
+.jquery-safari-checkbox img{
+	background-position: 0px 0px;
+}
+.jquery-safari-checkbox-hover img{
+	background-position: -16px 0px;
+}
+.jquery-safari-checkbox-checked img{
+	background-position: 0px -16px;
+}
+.jquery-safari-checkbox-checked .jquery-safari-checkbox-hover img {
+	background-position: -16px -16px;
+}
+
+.jquery-safari-checkbox-disabled img{
+	background-position: 0px -32px;
+}
+.jquery-safari-checkbox-checked .jquery-safari-checkbox-disabled img{
+	background-position: 0px -48px;
+}
+
+
+.jquery-safari-radio {display: inline; font-size: 16px; line-height: 16px; cursor: pointer; cursor: hand;}
+.jquery-safari-radio .mark {display: inline;}
+
+.jquery-safari-radio img {vertical-align: middle; width: 16px; height: 16px;}
+.jquery-safari-radio img{background: transparent url(/app_themes/admin/images/inputs/radio-safari.png) no-repeat;}
+
+.jquery-safari-radio img{
+	background-position: 0px 0px;
+}
+.jquery-safari-radio-hover img{
+	background-position: -16px 0px;
+}
+.jquery-safari-radio-checked img{
+	background-position: 0px -16px;
+}
+.jquery-safari-radio-checked .jquery-safari-radio-hover img {
+	background-position: -16px -16px;
+}
+
+.jquery-safari-radio-disabled img{
+	background-position: 0px -32px;
+}
+.jquery-safari-radio-checked .jquery-safari-radio-disabled img{
+	background-position: 0px -48px;
+}
+
+
+/*	checkboxTree	*/
+.ui-widget-daredevel-checkboxTree li {
+	list-style-type: none;
+	position: relative;
+}
+
+.ui-widget-daredevel-checkboxTree li span {
+	cursor: default;
+	position: absolute;
+	top: 1px;
+	left: -16px;
+}
+.cms_rtl .ui-widget-daredevel-checkboxTree li span {
+	left: auto;
+	right: -16px;
+}
+
+/* ----------------------------------Selectmenu----------------------------------*/
+.ui-select-menu-div{display:inline;}
+.ui-selectmenu { display: block; display: inline-block; position: relative; height: 2.2em; vertical-align: middle; text-decoration: none !important; overflow: hidden; zoom: 1; }
+.ui-selectmenu-icon { position:absolute; right:6px; margin-top:-8px; top: 50%; }
+.cms_rtl .ui-selectmenu-icon { right:auto; left:6px; }
+.ui-selectmenu-menu { padding:0; margin:0; position:absolute; top: 0; display: none; z-index: 1005;} /* z-index: 1005 to make selectmenu work with dialog */
+.cms_rtl .ui-selectmenu-menu { direction:rtl; text-align:right; }
+.ui-selectmenu-menu  ul { padding:0; margin:0; list-style:none; position: relative; overflow: auto; overflow-y: auto ; overflow-x: hidden; } 
+.ui-selectmenu-open { display: block; }
+.ui-selectmenu-menu-popup { margin-top: -1px; }
+.ui-selectmenu-menu-dropdown { }
+.ui-selectmenu-menu li { padding:0; margin:0; display: block; border-top: 1px dotted transparent; border-bottom: 1px dotted transparent; border-right-width: 0 !important; border-left-width: 0 !important; font-weight: normal !important; }
+.ui-selectmenu-menu li a,.ui-selectmenu-status { color: #333; line-height: 1.4em; display: block; padding: .405em 1em .405em 1em; outline:none; text-decoration:none; }
+.ui-selectmenu-menu li a { line-height: 1.1em; padding: .405em 1em .405em 1em;  }
+.ui-selectmenu-menu li.ui-state-disabled a, .ui-state-disabled { cursor: default; }
+.ui-selectmenu-menu li.ui-selectmenu-hasIcon a,
+.ui-selectmenu-hasIcon .ui-selectmenu-status { padding-left: 20px; position: relative; margin-left: 5px; }
+.cms_rtl .ui-selectmenu-hasIcon .ui-selectmenu-status { padding-left: auto; padding-right: 20px; margin-left: auto;margin-right: 5px; }
+.ui-selectmenu-menu li .ui-icon, .ui-selectmenu-status .ui-icon { position: absolute; top: 1em; margin-top: -8px; left: 0; }
+.cms_rtl .ui-selectmenu-menu li .ui-icon, .cms_rtl .ui-selectmenu-status .ui-icon { left: auto; right: 0; }
+.ui-selectmenu-status { line-height: 1.4em; text-align:left; }
+.cms_rtl .ui-selectmenu-status { line-height: 1.4em; text-align:right;}
+.ui-selectmenu-menu li span,.ui-selectmenu-status span { display:block; margin-bottom: .2em; }
+.ui-selectmenu-menu li .ui-selectmenu-item-header { font-weight: bold; }
+.ui-selectmenu-menu li .ui-selectmenu-item-footer { opacity: .8; }
+/* for optgroups */
+.ui-selectmenu-menu .ui-selectmenu-group { font-size: 1em; }
+.ui-selectmenu-menu .ui-selectmenu-group .ui-selectmenu-group-label { line-height: 1.4em; display:block; padding: .4em .8em .2em; color:#a6a6a6; }
+.ui-selectmenu-menu .ui-selectmenu-group ul { margin: 0; padding: 0; }
+/* IE6 workaround (dotted transparent borders) */
+* html .ui-selectmenu-menu li { border-color: pink; filter:chroma(color=pink); width:100%; }
+* html .ui-selectmenu-menu li a { position: relative }
+/* IE7 workaround (opacity disabled) */
+*+html .ui-state-disabled, *+html .ui-state-disabled a { color: silver; }
+
+
+/* ----------------------------------multiselect----------------------------------*/
+.ui-multiselect { padding:2px 0 0 0; text-align:left }
+.cms_rtl .ui-multiselect { text-align:right }
+.ui-multiselect > span{ padding:0 2px;}
+.ui-multiselect span.ui-icon { float:right;padding:0 }
+.cms_rtl .ui-multiselect span.ui-icon { float:left }
+.ui-multiselect-single .ui-multiselect-checkboxes input { position:absolute !important; top: auto !important; left:-99px; }
+.cms_rtl .ui-multiselect-single .ui-multiselect-checkboxes input { left:auto;right:-99px; }
+.ui-multiselect-single .ui-multiselect-checkboxes label { padding:5px !important }
+
+.ui-multiselect-header { margin-bottom:3px; padding:3px 4px; font-weight:normal !important;}
+.ui-multiselect-header ul { font-size:0.9em }
+.ui-multiselect-header ul li { float:left; padding:0 8px 0 0 }
+.cms_rtl .ui-multiselect-header ul li { float:right; padding:0 0 0 10px }
+.ui-multiselect-header a { text-decoration:none }
+.ui-multiselect-header a:hover { text-decoration:underline }
+.ui-multiselect-header span.ui-icon { float:left }
+.cms_rtl .ui-multiselect-header span.ui-icon { float:right }
+.ui-multiselect-header li.ui-multiselect-close { float:right; text-align:right; padding-right:0 }
+.cms_rtl .ui-multiselect-header li.ui-multiselect-close { float:left; text-align:left; padding-left:0; padding-right:auto }
+.ui-multiselect-header .ui-helper-reset span{ line-height:16px; }
+
+.ui-multiselect-menu { display:none; padding:0px; position:absolute; z-index:10000 }
+.cms_rtl .ui-multiselect-menu { direction:rtl; text-align:right; }
+.ui-multiselect-checkboxes { position:relative /* fixes bug in IE6/7 */; overflow-y:auto; overflow-x:hidden; }
+.ui-multiselect-checkboxes label { cursor:default; display:block; border:1px solid transparent; padding:1px 2px; line-height:13px; }
+/*.ui-multiselect-checkboxes label input {  top:-2px; margin:0 1px; vertical-align:middle; }*/
+.ui-multiselect-checkboxes label input { position:relative; top:0px; vertical-align:middle;  }
+.ui-multiselect-checkboxes label input.mslctordr { top:0px; margin:0 1px; vertical-align:middle; }
+.ui-multiselect-checkboxes label span { padding:2px 1px 0; }
+.ui-multiselect-checkboxes li { clear:both; font-size:0.9em; padding:0 3px }
+.ui-multiselect-checkboxes li.ui-multiselect-optgroup-label { text-align:center; font-weight:bold; border-bottom:1px solid }
+.ui-multiselect-checkboxes li.ui-multiselect-optgroup-label a { display:block; padding:3px; margin:1px 0; text-decoration:none }
+
+/* remove label borders in IE6 because IE6 does not support transparency */
+* html .ui-multiselect-checkboxes label { border:none }
+
+.ui-multiselect-hasfilter ul { position:relative; top:2px }
+.ui-multiselect-filter { float:left; margin:2px 8px 0 0; font-size:11px; color:#fff; }
+.cms_rtl .ui-multiselect-filter { float:right; margin:2px 0 0 8px; line-height:16px; }
+.ui-multiselect-filter input { width:90px; font-size:10px !important; margin:1px 0 0 5px; height:14px; padding:0 2px; border:1px solid #292929; /*-webkit-appearance:textfield; -webkit-box-sizing:content-box;*/ }
+.cms_rtl .ui-multiselect-filter input { margin:1px 5px 0 0; }
+
+
+/*				jcarousel					*/
+/* This <div> element is wrapped by jCarousel around the list and has the classname "jcarousel-container". */
+.jcarousel-container {
+	position: relative;
+}
+.jcarousel-clip {
+	z-index: 2;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	position: relative;
+}
+.jcarousel-list {
+	z-index: 1;
+	overflow: hidden;
+	position: relative;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+}
+.jcarousel-list li, .jcarousel-item {
+	float: left;
+	list-style: none;
+	/* We set the width/height explicitly. No width/height causes infinite loops. */
+	/*width: 520px;
+	height: 75px;*/
+}
+/* The buttons are added dynamically by jCarousel before the <ul> list (inside the <div> described above) and have the classnames "jcarousel-next" and "jcarousel-prev".*/
+.jcarousel-next {
+	z-index: 3;
+	display: none;
+}
+.jcarousel-prev {
+	z-index: 3;
+	display: none;
+}
+
+
+/*
+Document   : jquery.pnotify.default.css
+Created on : Nov 23, 2009, 3:14:10 PM
+Author     : Hunter Perrin
+Version    : 1.2.0
+Link       : http://pinesframework.org/pnotify/
+Description:
+	Default styling for Pines Notify jQuery plugin.
+*/
+/* -- Notice */
+.ui-pnotify {
+	top: 25px;
+	right: 25px;
+	position: absolute;
+	height: auto;
+	/* Ensures notices are above everything */
+	z-index: 9999;
+}
+/* Hides position: fixed from IE6 */
+html > body .ui-pnotify {
+	position: fixed;
+}
+.ui-pnotify .ui-pnotify-shadow {
+	-webkit-box-shadow: 0px 2px 10px rgba(50, 50, 50, 0.5);
+	-moz-box-shadow: 0px 2px 10px rgba(50, 50, 50, 0.5);
+	box-shadow: 0px 2px 10px rgba(50, 50, 50, 0.5);
+}
+.ui-pnotify-container {
+	background-position: 0 0;
+	padding: .8em;
+	height: 100%;
+	margin: 0;
+}
+.ui-pnotify-sharp {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+.ui-pnotify-closer, .ui-pnotify-sticker {
+	float: right;
+	margin-left: .2em;
+}
+.cms_rtl .ui-pnotify-closer, .cms_rtl .ui-pnotify-sticker {
+	float: left;
+	margin-right: .2em;
+	margin-left: 0;
+}
+.ui-pnotify-title {
+	display: block;
+	margin-bottom: .4em;
+}
+.ui-pnotify-text {
+	display: block;
+}
+.ui-pnotify-icon, .ui-pnotify-icon span {
+	display: block;
+	float: left;
+	margin-right: .2em;
+}
+.cms_rtl .ui-pnotify-icon, .cms_rtl .ui-pnotify-icon span {
+	float: right;
+	margin-left: .2em;
+	margin-right: 0;
+}
+/* -- History Pulldown */
+.ui-pnotify-history-container {
+	position: absolute;
+	top: 0;
+	right: 18px;
+	width: 70px;
+	border-top: none;
+	padding: 0;
+	-webkit-border-top-left-radius: 0;
+	-moz-border-top-left-radius: 0;
+	border-top-left-radius: 0;
+	-webkit-border-top-right-radius: 0;
+	-moz-border-top-right-radius: 0;
+	border-top-right-radius: 0;
+	/* Ensures history container is above notices. */
+	z-index: 10000;
+}
+.ui-pnotify-history-container .ui-pnotify-history-header {
+	padding: 2px;
+}
+.ui-pnotify-history-container button {
+	cursor: pointer;
+	display: block;
+	width: 100%;
+}
+.ui-pnotify-history-container .ui-pnotify-history-pulldown {
+	display: block;
+	margin: 0 auto;
+}
+
+
+.ui-pnotify .picon {
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 17px;
+	height: 17px;
+}
+.ui-pnotify-title {
+	line-height: 17px;
+	min-height: 17px;
+}
+

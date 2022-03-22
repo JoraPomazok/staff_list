@@ -1,0 +1,81 @@
+.third {
+    /*height: 50px;*/
+    /*width: 166px;*/
+}
+
+.third.frst {
+    /*width: 166px;*/
+}
+
+.third.limited {
+    /*width: 166px;*/
+}
+
+.third.lst {
+    /*width: 166px;*/
+}
+
+.third:hover,
+.third.active{
+    /*height: 46px;*/
+}
+
+.access-description  {
+    display: none;
+}
+
+.access-description-all {
+    /*padding-bottom: 20px;*/
+}
+
+.additional-permissions-left {
+    float: left;
+    width: 50%;
+    margin: 0 10px 0 0;
+}
+
+.additional-permissions-title {
+    text-align: center;
+    padding-bottom: 19px;
+    color: #7E7E7E;
+}
+
+.additional-permissions {
+    padding-bottom: 14px;
+}
+
+.additional-permissions li {
+    display: flex;
+    padding-bottom: 9px;
+}
+
+.additional-permissions-checkbox-title {
+    font-size: 14px;
+    margin-left: 7px;
+    display: inline-block;
+    line-height: 15px;
+    /*vertical-align: 2px;*/
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.additional-permissions-checkbox-title:hover {
+    cursor: pointer;
+}
+
+.access-type-f {
+    color: #27AE60;
+}
+.access-type-c {
+    color: #4890D2;
+}
+.access-type-l {
+    color: #F2C94C;
+}
+.access-type-r {
+    color: #2D9CDB;
+}
+
+/*.moz illa .third {*/
+    /*width: 199px !important;*/
+/*}*/

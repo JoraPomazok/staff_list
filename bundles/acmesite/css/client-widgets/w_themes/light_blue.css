@@ -1,0 +1,97 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* button styles */
+.widget_button {background:rgba(3, 169, 244, 1); color:#fff;}
+
+/* widget styles */
+/* widget modal articles */
+.widget_articles .search_panel .fa-times {color:rgba(3, 169, 244, 1); background-color:rgba(3, 169, 244, 0.1);}
+.widget_articles .recommended {border-top:1px solid rgba(3, 169, 244, 0.5);}
+.widget_articles .recommended .articles_header > a .link {color:rgba(3, 169, 244, 1);}
+.widget_articles .recommended ul li a h4 {color:rgba(3, 169, 244, 1);}
+.widget_articles .results_footer {border-top:1px solid rgba(3, 169, 244, 0.5);}
+.widget_articles .results_footer p a {color:rgba(3, 169, 244, 1);}
+.widget_articles .results_footer button {background-color:rgba(3, 169, 244, 1);}
+.widget_articles .results_footer .article_back {background-color:rgba(3, 169, 244, 1);}
+.widget_articles .results_search {border-top:1px solid rgba(3, 169, 244, 0.5);}
+.widget_articles .results_search .results_search_inner .articles_header > a .link {color:rgba(3, 169, 244, 1);}
+.widget_articles .results_search ul li a h4 {color:rgba(3, 169, 244, 1);}
+.widget_articles .show_article h1 {color:rgba(3, 169, 244, 1);}
+.widget_articles .show_article p a {color:rgba(3, 169, 244, 1)}
+.widget_articles .show_article p a:hover {color:rgba(3, 169, 244, 1); text-decoration: underline;}
+
+/*.widget_articles .scroll_wrap_sr .scroll_outer_sr {background:#e0f5ff;}
+.widget_articles .scroll_wrap_sr .scroll_outer_sr .scroll_inner_sr {background:rgba(3, 169, 244, .5);}
+.widget_articles .scroll_wrap_sr .scroll_outer_sr .scroll_inner_sr:hover {background:rgba(3, 169, 244, 1);}
+.widget_articles .scroll_wrap_sr .scroll_outer_sr .scroll_inner_sr.active {background:rgba(3, 169, 244, 1);}
+.widget_articles .scroll_wrap_sa .scroll_outer_sa {background:#e0f5ff;}
+.widget_articles .scroll_wrap_sa .scroll_outer_sa .scroll_inner_sa {background:rgba(3, 169, 244, .5);}
+.widget_articles .scroll_wrap_sa .scroll_outer_sa .scroll_inner_sa:hover {background:rgba(3, 169, 244, 1);}
+.widget_articles .scroll_wrap_sa .scroll_outer_sa .scroll_inner_sa.active {background:rgba(3, 169, 244, 1);}*/
+.nano .nano-pane {background:#e0f5ff;}
+.nano .nano-pane .nano-slider {background:rgba(3, 169, 244, .5);}
+body .nano .nano-pane.active .nano-slider {background:rgba(3, 169, 244, 1); opacity:1;}
+
+/* request win - header */
+.widget_modal h4 {background:rgba(3, 169, 244, 1); color:#fff;}
+.widget_modal > i {color:#fff;}
+
+/* request win - content */
+.widget_modal .modal_content_inner ul .field {border-bottom:1px solid rgba(3, 169, 244, 0.5);}
+.widget_modal .modal_content_inner ul .field .kb_search {color:rgba(3, 169, 244, 1); text-decoration:none;}
+.widget_modal .modal_content_inner ul .field .kb_search:hover {text-decoration:underline;}
+.widget_modal .modal_content_inner ul .field.drop_list i {color:rgba(3, 169, 244, 1);}
+
+.widget_modal .modal_content_inner ul .field .search_view .fa-search {color:rgba(3, 169, 244, 1);}
+.widget_modal .modal_content_inner ul .field .search_view .fa-spinner {color:rgba(3, 169, 244, 1);}
+.widget_modal .modal_content_inner ul .field .search_view .fa-times {color:rgba(3, 169, 244, 1); background:rgba(3, 169, 244, 0.1);}
+
+.widget_modal .modal_content_inner ul .search_results {background:rgba(3, 169, 244, 0.05); border-bottom:1px solid rgba(3, 169, 244, 0.5);}
+.widget_modal .modal_content_inner ul .search_results h5 a {color:rgba(3, 169, 244, 1);}
+.widget_modal .modal_content_inner ul .search_results h6 {color:rgba(3, 169, 244, 1);}
+.widget_modal .modal_content_inner ul .search_results p span,
+.widget_modal .modal_content_inner ul .search_results h6 span {/*background:rgba(3, 169, 244, 0.3);*/ font-weight:bold;}
+
+/*.widget_modal .modal_content_inner ul .drop_list .drop_list_items {border-bottom:1px solid rgba(3, 169, 244, 0.5); background:#e0f5ff;}
+.widget_modal .modal_content_inner ul .drop_list .drop_list_items span:hover {background:rgba(3, 169, 244, 0.6); color:#fff;}*/
+
+.widget_modal .modal_content_inner ul .added_file {border-bottom:1px solid rgba(3, 169, 244, 0.3); background:rgba(3, 169, 244, 0.05);}
+.widget_modal .modal_content_inner ul .added_file p {color:rgba(3, 169, 244, 1);}
+
+.widget_modal .scroll_wrap .scroll_outer {background:#e0f5ff;}
+.widget_modal .scroll_wrap .scroll_outer .scroll_inner {background:rgba(3, 169, 244, .5);}
+.widget_modal .scroll_wrap .scroll_outer .scroll_inner:hover {background:rgba(3, 169, 244, 1);}
+.widget_modal .scroll_wrap .scroll_outer .scroll_inner.active {background:rgba(3, 169, 244, 1);}
+
+/* select2 colors */
+.select2-container--default .select2-selection--single .select2-selection__arrow b {border-color:rgba(3, 169, 244, 1) transparent transparent;}
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {border-color:transparent transparent rgba(3, 169, 244, 1);}
+.select2-dropdown {border-color:1px solid rgba(3, 169, 244, 0.5); }
+.select2-container--open .select2-dropdown--below {border-top:1px solid rgba(3, 169, 244, 0.5); border-bottom:1px solid rgba(3, 169, 244, 0.5); background:#e0f5ff;}
+.select2-container--default .select2-results__option--highlighted[aria-selected] {background:rgba(3, 169, 244, 0.6);}
+
+/* footer */
+.widget_modal .modal_foot {border-top:1px solid rgba(3, 169, 244, 0.5); background:rgba(3, 169, 244, 0.1);}
+.widget_modal .modal_foot .free_message a {color:rgba(3, 169, 244, 1); text-decoration:none;}
+.widget_modal .modal_foot .free_message a:hover {text-decoration:underline;}
+.widget_modal .modal_foot .add_files {border:none; background:rgba(3, 169, 244, 1); color:#fff;}
+.widget_modal .modal_foot input[name="send_form"], .widget_modal .modal_foot #g_widget_butt_submit_spin {border:none; background:rgba(3, 169, 244, 1); color:#fff;}
+
+/* window: success request */
+.win_success h3 {background:rgba(3, 169, 244, 1);}
+
+.widget_help {border-color: rgba(3, 169, 244, 1);}
+
+.modal_foot_captcha__submit {
+    background:rgba(3, 169, 244, 1);
+}
+
+.modal_foot_captcha__item {
+    border: 1px solid rgba(3, 169, 244, 1);
+    color: rgba(3, 169, 244, 1);
+}
+
+.modal_foot_captcha__item.active {
+    background:rgba(3, 169, 244, 1);
+}

@@ -1,0 +1,248 @@
+/*** ПРАВИЛА/ШАБЛОНЫ ***/
+
+/* СЕТКА START */
+
+.frstItem,
+.scndItem,
+.lstItem {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    position: relative;
+    margin-right: 10px !important;
+    margin-bottom: 10px !important;
+    box-sizing: border-box;
+}
+
+.letters_content .choices,
+.frstItem {
+    flex: 1 1 100%;
+    max-width: 400px;
+}
+.lstItem,
+.scndItem {
+    flex: 1;
+}
+
+/* СЕТКА END */
+
+/* ФИКСЫ ДЛЯ КОНКРЕТНЫХ ПРАВИЛ START */
+.text_type_content_select {
+    flex: 0;
+}
+
+.lstItem > input,
+.frstItem > input,
+.lstItem > input,
+.scndItem > input {
+    flex: 1;
+    height: 100%;
+}
+
+.scndItem .choices,
+.lstItem .choices,
+.frstItem .choices,
+.scndItem .css_cf_date__input,
+.css_cf_date .css_cf_date__input,
+.scndItem .css_cf_date__input,
+.scndItem.css_cf_date .choices,
+.css_cf_date input.action_field_class,
+.input_calendar_ico,
+input.action_field_class,
+.lstItem.lst-group_id_changed .choices,
+.scndItem.scnd-group_id_changed .choices,
+.scndItem .input_calendar_ico,
+.lstItem .input_calendar_ico,
+.lstItem.lst-set_reopen.lst-set_reopen_3,
+.scndItem .wrapper__action_field_class,
+.scndItem .wrapper__action_field_class input,
+.scndItem.flt_l.scnd-set_subject,
+.templates__wrapper .scndItem.flt_l.scnd-set_reopen .action_field_class.set_reopen_text,
+.templates__wrapper .scndItem.flt_l.scnd-set_reopen .choices,
+.templates__wrapper .scndItem.flt_l[class*="scnd-cf_"] .action_field_class.cf_date_add_days {
+    flex: 1;
+}
+
+
+.scndItem[class*="scnd-cf_"].-block .input_calendar_ico ~ .choices,
+.scndItem[class*="scnd-cf_"].-block .css_cf_date__input ~ .choices,
+.redactor-box,
+.lst-set_reopen,
+.scnd-email_to_group,
+.scnd-message_to_chat,
+.scnd-comment_to_post,
+.lstItem.lst-set_reopen,
+.note-content,
+.letters_content.scnd-email_to_user,
+.letters_content.scnd-perform_push,
+.letters_content.scnd-email_to_staff,
+.letters_content.scnd-perform_webhook,
+.lstItem.lst-set_reopen.lst-set_reopen_3 .redactor-box,
+.lstItem.lst-set_reopen.lst-set_reopen_3,
+.templates__wrapper .letters_content.scnd-fwd_case_to_email,
+.scndItem.clr_b.scnd-set_subject label,
+.scndItem.clr_b.scnd-set_subject {
+    flex: 1 1 100%;
+}
+
+.scndItem[class*="scnd-cf_"][class*="_changed"] > .select-title ~ .choices, /* Да, именно так и нужно :) */
+.lstItem[class*="lst-cf_"][class*="_changed"] > .value-title ~ .choices,
+.scndItem.scnd-status_changed .choices,
+.lstItem.lst-status_changed .choices,
+.lstItem.lst-staff_id_changed .choices,
+.scndItem.scnd-staff_id_changed .choices,
+.lstItem.lst-priority_changed .choices,
+.scndItem.scnd-priority_changed .choices,
+.scndItem.scnd-email_to_group.-block,
+.scndItem.scnd-perform_webhook .choices,
+.scndItem.scnd-message_to_chat,
+.scndItem.scnd-comment_to_post {
+    flex: auto;
+}
+
+.acrItem .input_calendar_ico input {
+    height: 27px;
+}
+
+.scndItem.scnd-comment_to_post,
+.scndItem.scnd-message_to_chat {
+    justify-content: space-between;
+}
+
+.scndItem.scnd-staff_id {
+    flex-wrap: wrap;
+}
+
+.scndItem.scnd-set_reopen > .wrapper__action_field_class.hidden {
+    display: block;
+}
+
+.letters_content.scnd-perform_webhook .request_standart_wrap .choices {
+    max-width: unset;
+}
+
+.letters_content .email-field.-block {
+    display: inline-block;
+}
+
+.lstItem.lst-status_changed.-block,
+.scndItem.scnd-status_changed.-block,
+.letters_content.scnd-email_to_group .l_fields {
+    display: flex;
+}
+
+.templates__wrapper .scndItem.scnd-email_to_user {
+    justify-content: space-between;
+}
+
+.acrWrap .select_category--wrapper .choices,
+.templates__wrapper .row__wrapper .row__wrapper--first {
+    flex: 0 1 428px;
+}
+
+.templates__wrapper .row__wrapper .js-visibility_staff_id,
+.templates__wrapper .row__wrapper .js-visibility_group_id {
+    flex: auto;
+}
+
+.scndItem.scnd-set_reopen,
+.scndItem.css_cf_date {
+    flex-wrap: nowrap;
+}
+
+.request_wrap {
+    flex: 0 1 400px;
+}
+
+.request_list {
+    width: 321px;
+}
+
+/* Фикс отступов */
+.css_cf_date input.action_field_class,
+.css_cf_date .css_cf_date__input,
+.scndItem .choices + div.input_calendar_ico,
+.scndItem .select_wrap_mask + div
+{
+    margin-left: 10px;
+}
+
+.css_cf_date .css_cf_date__input input.action_field_class {
+    margin-left: 0;
+}
+
+.templates__wrapper .input_calendar_ico input.action_field_class {
+    padding-left: 0;
+}
+
+.templates__wrapper .input_calendar_ico {
+    padding-left: 10px;
+}
+
+.scndItem.scnd-set_subject .list_lang_form.flt_r {
+    margin-left: auto;
+}
+
+.input_calendar_ico,
+input.action_field_class {
+    padding-left: 10px;
+    float: right;
+}
+
+.sc .input_calendar_ico,
+.sc input.action_field_class {
+    padding-left: 0;
+}
+
+.letters_content.note-content.scnd-perform_sound.-block,
+.letters_content.scnd-perform_webhook .request_custom_data,
+.letters_content .row-ckeditor {
+    margin-bottom: 10px;
+}
+
+.letters_content.scnd-message_to_chat,
+.letters_content.scnd-comment_to_post,
+.letters_content.scnd-perform_push .letters_content.note-content.scnd-perform_push {
+    margin-bottom: 10px;
+}
+
+.acrWrap .select_category--wrapper .choices,
+.templates__wrapper .row__wrapper .row__wrapper--first,
+.scndItem.scnd-set_reopen > .choices,
+.letters_content,
+.letters_content.scnd-email_to_staff .l_fields input,
+.letters_content.scnd-email_to_group .l_fields input,
+.letters_content.scnd-perform_sound .choices,
+.letters_content.scnd-perform_push .text_js_pos.note-content input {
+    margin-right: 10px;
+}
+
+.letters_content.scnd-perform_push .letters_content.note-content.scnd-perform_push {
+    margin-right: 0;
+}
+
+.lst-set_reopen .redactor-box .redactor-layer,
+.lstItem.lst-set_reopen.lst-set_reopen_3 .redactor-layer,
+.letters_content.scnd-add_note .redactor-layer {
+    color: #000 !important;
+    background: #fffae9 !important;
+
+}
+
+.request_custom_wrap {
+    margin-bottom: 10px;
+}
+
+/* Фикс для div "за исключением" START */
+
+.staff_add_option .sao_title {
+    position: absolute;
+    left: -115px;
+}
+.take_chat_add_option .sao_title {
+    position: absolute;
+    left: -21px;
+}
+/* Фикс для div "за исключением" END */
+
+/* ФИКСЫ ДЛЯ КОНКРЕТНЫХ ПРАВИЛ END */

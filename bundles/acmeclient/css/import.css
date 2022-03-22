@@ -1,0 +1,256 @@
+@charset "utf-8";
+/* CSS Document */
+
+.content div.heading {padding-bottom:0; border-bottom:none; background:#fff;}
+.content div.heading a {color:#2d9cdb;}
+
+.migration {display: flex; justify-content: space-between; padding: 15px 15px 0;}
+.migration > div {background:#f6f6f6; border:1px solid #dcdcdc; border-radius:3px;  cursor:pointer; transition: background .5s ease-out;}
+.migration > div p {font-size: 14px; font-weight: normal}
+.migration h4, .migration p {text-align:center; font-size:14px; color:#343c44;}
+.migration p {margin-top:7px;}
+/*.migration > div:hover {border:2px solid #dcdcdc; padding:18px 0 17px 0; background:#fff;}*/
+/*.migration > div.active {border:2px solid #2d9cdb; padding:18px 0 17px 0; background:#fff;}*/
+.migration > .new_line {margin-top: 16px;}
+
+.common_import_win {padding:0 15px; display:none;}
+.common_import_win .column {position: relative;}
+.common_import_win .column h5 {color:#7e7e7e; font-size:13px; font-weight:normal; padding-bottom: 7px;}
+.common_import_win .column input[type="text"], 
+.common_import_win .column input[type="password"], 
+.common_import_win .column input[type="email"], 
+.common_import_win .column input[type="phone"],
+.chosen-container-single .chosen-single,
+.csv_file_block
+{width:100%; box-sizing: border-box; padding:5px 8px; outline:none; border:1px solid #E0E0E0; line-height:15px; height:27px; margin-bottom: 10px; box-shadow: none;}
+.common_import_win .column label {padding-top:15px; line-height:18px;}
+.common_import_win .column label:first-child {padding-top: 0;}
+.common_import_win .column label span {color:#7e7e7e;}
+.common_import_win .column a[class*="_import"] {background:#4ca9e4; color:#fff; font-size:13px; height:15px; line-height:15px; padding:6px 16px; border-radius:3px; text-decoration:none; float:right; font-weight:bold;position: absolute;
+    bottom: 0;
+    right: 0;}
+.common_import_win .column a.yandex_import {position: static; margin: 0;}
+
+.csv_file_block {
+    border-radius: 3px;
+}
+
+.important_issue {
+    float: left;
+    max-width: 70%;
+    line-height: 27px;
+}
+
+.important_issue span {
+    color: #FF0000;
+    font-weight: bold;
+}
+
+.row {
+    position: relative;
+}
+
+.custom-row__text-in-field input {
+    padding-right: 80% !important;
+}
+
+.row input,
+.row .chosen-single 
+{
+    margin-bottom: 0 !important;
+}
+.chosen-container-single .chosen-single {
+    padding: 0 0 0 8px
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.csv_step1 {padding-left: 15px; padding-right: 15px; display:none;}
+.csv_step1 h5 {color:#7e7e7e; font-size:13px; font-weight:normal; padding-bottom: 7px; overflow: hidden;}
+.csv_step1 h5 a {float: right;}
+
+.csv_step1 input {display:none;}
+.csv_step1 label {
+    background: #4ca9e4;
+    color: #fff;
+    font-size: 13px;
+    line-height: 15px;
+    padding: 0px 9px;
+    border-radius: 3px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    float: right;
+    box-sizing: border-box;
+    height: 18px;
+}
+
+.csv_step2 {padding:0 16px; display:none;}
+.csv_step2 h5 {color:#7e7e7e; font-size:13px; font-weight:normal; padding:10px 0 6px 0;}
+.csv_step2 table {width:100%; background-color:#fff; table-layout:fixed; border-collapse:collapse;}
+.csv_step2 table tr td {border:1px solid #E0E0E0; height:27px; text-indent:10px; vertical-align:middle; font-size:13px; font-weight:bold;}
+.csv_step2 table tr td:last-child {text-indent:0; font-weight:normal;}
+.csv_step2 tr td .red {color:#f05252;}
+.csv_step2 tr td .chosen-container-single .chosen-single {border:none;}
+.csv_step2 tr td .chosen-container .chosen-drop {top:107%; width:101%;}
+.csv_step2 tr td .chosen-container.chosen-with-drop .chosen-drop {left:-1px;}
+.csv_step2 .links {padding:16px 0;}
+.csv_step2 .links .cancel {float:left; color:#2d9cdb; font-size:13px; line-height:27px;}
+.csv_step2 .links .import {background:#4ca9e4; color:#fff; font-size:13px; height:15px; line-height:15px; padding:6px 16px; border-radius:3px; text-decoration:none; float:right; font-weight:bold; text-align:center;}
+.icon-spinner, a .icon-spin {display:none;}
+.zendesk_import, .freshdesk_import, .helpdesk_import {text-align:center;}
+.helpdesk_import_disabled {background-color: #d6d6d6 !important; cursor: not-allowed;}
+
+.migration_selector {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+.migration_selector>p {
+    font-weight: 200;
+}
+.migration_selector>p>a {
+    text-decoration: none;
+}
+.migration_selector>p {
+    display: none;
+}
+.migration_selector>p.active {
+    display: block;
+}
+.migration_selector a,
+.migration_selector a:visited {
+    text-decoration: none;
+    color: #2d9cdb;
+}
+
+.migration_active {
+    font-weight: bold;
+    color: #000 !important;
+    cursor: default;
+    pointer-events: none;
+}
+
+.column__checkbox {
+    display: flex;
+    flex-direction: row;
+}
+
+.column__checkbox input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+.container__img {
+    width: 691px;
+    height: 85px;
+    overflow: hidden;
+    border: 1px solid #dcdcdc;
+}
+
+#upload_csv_form .container__img.users-multilingual {
+    background: url(/bundles/acmeclient/images/csv_sample_multilingual_users.png);
+}
+
+#upload_csv_form .container__img.users {
+    background: url(/bundles/acmeclient/images/list_csv.png);
+}
+
+#upload_csv_form .example__csv {
+    display: inline-block;
+    line-height: 1.4;
+    padding: 6px 10px;
+    border: 1px solid #dcdcdc;
+    border-radius: 3px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#data_table .choices__inner {
+    border: none !important;
+}
+
+#data_table .choices__input.choices__input--cloned {
+    padding: 6px !important;
+}
+
+.-js-is-highlighted-td {
+    background: #f6f6f6;
+}
+
+.-js-is-highlighted-option {
+    color: #eb5757 !important;
+}
+
+.settings-import__wrapper .noteAlert .ckeditor {
+    display: none;
+}
+
+.settings-import__wrapper .noteAlert .wrap {
+    margin-bottom: 18px;
+}
+
+.common_import_win .column label.column__checkbox:first-child {
+    padding-top: 22px;
+}
+
+.csv_file_block {
+    position: relative;
+    padding: 4px;
+}
+
+.csv_file_block p {
+    max-width: calc(100% - 86px);
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 1069px){
+    .container__img {
+        width: 600px;
+    }
+}
+
+@media (max-width: 1000px){
+    .common_import_win .column a {
+        position: static;
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 768px){
+    .container__img {
+        width: auto;
+    }
+    .-col-2 {
+        width: 100%;
+    }
+    .common_import_win .column label.column__checkbox:first-child {
+        padding-top: 15px;
+    }
+    .important_issue {
+        float: none;
+        max-width: 100%;
+        margin-bottom: 20px;
+        line-height: 15px;
+    }
+}
+
+@media (max-width: 640px){
+    .migration {
+        flex-direction: column;
+    }
+    .topTab .switch-tab
+    {
+        width: 100%;
+    }
+    .topTab .switch-tab:not(:first-child) {
+        margin: 10px 0 0;
+    }
+}

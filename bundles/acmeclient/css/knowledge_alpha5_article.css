@@ -1,0 +1,133 @@
+@charset "utf-8";
+/* CSS Document */
+
+.content div.heading {
+	border: none;
+	padding: 0 15px;
+	height: 34px;
+	background: #e9ebed;
+	margin: 0;
+}
+
+.entry {
+	padding: 15px;
+}
+
+.entry .row div.article_key_section input{
+	display: none;
+}
+
+.entry .fields {
+	margin-bottom: 10px;
+}
+
+.back {
+	line-height: 34px;
+}
+
+.editorBlock {
+	margin-bottom: 20px;
+}
+.entry .editorBlock {
+	margin-bottom: 15px;
+}
+
+.win.webkit .select2-container-multi .select2-choices .select2-search-field input {
+    padding-top: 0;
+}
+
+
+.win.webkit .select2-container-multi .select2-choices .select2-search-choice {
+	margin-top: 3px;
+}
+
+.webkit .select2-search-choice-close {
+    top: 4px;
+}
+#spin_button_update_kbau {
+	width: 172px !important;
+}
+
+.fields .row.article--name {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.article--name .article-link {
+	flex: 0 0 auto;
+}
+
+.fields .article--name input {
+	flex: 1 0 auto;
+	width: unset;
+}
+
+.article--name .text {
+	flex: 1 1 100%;
+}
+
+.redactor-layer details {
+  display:block;
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  overflow:hidden;
+  outline: 0;
+  margin-bottom: 14px;
+}
+
+.redactor-layer summary::-webkit-details-marker{display:none;}
+
+.redactor-layer summary::-moz-list-bullet{list-style-type:none;}
+
+.redactor-layer summary::marker{display:none;} 
+
+.redactor-layer summary {
+   display: block;
+   cursor: pointer;
+   position: relative;
+   padding: 15px 20px;
+   border: none;
+   background: #fff;
+   margin: 0;
+   border-radius: unset;
+}
+
+.redactor-layer summary:before {  
+  content: '\f055';
+  font-family: "Font Awesome 5 Pro", sans-serif;
+  margin-right: 12px;
+  color: #cccccc;
+  font-weight: 900;
+}
+
+.redactor-layer details[open] > summary {
+	border-bottom: 1px solid #eee;
+	margin-bottom: 14px;
+}
+
+.redactor-layer details[open] > summary:before {
+  content: '\f056';
+}
+
+.redactor-layer summary ~ * {
+   padding: 2px 20px;
+}
+
+.redactor-layer details p {
+	background: none;
+	padding: 5px 0;
+}
+
+.redactor-layer details > p {
+	padding: 5px 20px !important;
+}
+
+.redactor-layer details > p:last-child {
+	margin-bottom: 1em;
+}
+
+.redactor-layer details p:empty {
+	display: none !important;
+}

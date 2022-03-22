@@ -1,0 +1,549 @@
+/* этот файл - надстройка над старыми стилями что в style.css для payment.html. Файл отдельно, чтоб можно было в случае чего вернуть старый вариант с оплатой */
+
+.twoBlock {
+    align-items: flex-start;
+}
+
+.pr_title {
+    height: 30px;
+    line-height: 30px;
+    padding-left: 42px;
+    font-size: 13px;
+    border-radius: 4px;
+}
+
+.processRow.active .pr_title .pr_text {
+    color: #4F4F4F;
+    font-weight: bold;
+}
+
+.pr_title .pr_nmbr {
+    height: 30px;
+    line-height: 30px;
+    width: 32px;
+}
+
+.pr_wrap {
+    padding-left: 32px;
+}
+
+.processRow .pr_title .fa-check {
+    top: 9px;
+}
+
+.pr_details .pr_wrap .twin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    min-height: 48px;
+    height: auto;
+    border-color: #E9E9E9;
+    border-radius: 4px;
+    padding: 15px 13px;
+    width: auto;
+    flex: 1;
+    margin-top: 0;
+}
+
+.pr_details .pr_wrap .twin.hidden {
+    display: none !important;
+}
+
+.pr_details .pr_wrap .twin:hover,
+.pr_details .pr_wrap .twin.selected 
+{
+    border-width: 2px;
+    background-color: #ffffff;
+    padding: 14px 12px;
+}
+
+.pr_details .pr_wrap .twin:hover {
+    border-color: #dbdbdb;
+}
+
+.pr_details .pr_wrap .twin.selected {
+    border-color: #2d9cdb;
+}
+
+.pr_details .pr_wrap .twin:active {
+    border-color: #4890d2;
+}
+
+.processRow.done .pr_title .pr_text 
+{
+    color: #828282;
+}
+
+.pr_details .pr_wrap .twin:first-of-type {
+    margin: 0;
+}
+
+.pr_details .pr_wrap .twin .t_twin {
+    margin-bottom: 4px;
+}
+
+.pr_details .pr_wrap .twin span {
+    font-size: 13px;
+    margin: 0;
+    white-space: normal;
+}
+
+.pr_details .pr_wrap .twin.modif__title .t_twin {
+    margin: 0;
+}
+
+.processRow .pr_details .card, 
+.processRow .pr_details .webmoney
+{
+    height: 27px;
+}
+
+.w_nmbr {
+    justify-content: center;
+    width: 180px;
+    max-width: 180px;
+    height: 94px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.w_qty {
+    padding: 0;
+    margin: 0;
+}
+
+.qty_small:not(:first-of-type) {
+    margin-top: 10px;
+}
+
+.n_qty .qty_number {
+    font-size: 18px;
+    line-height: 10px;
+}
+
+.n_qty .qty_desc {
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.qty_small .n_qty {
+    padding-top: 6px;
+    line-height: unset;
+    height: 26px;
+}
+
+.processRow .poiner {
+    font-size: 13px;
+}
+
+.processItem, .processRow .price a {
+    height: 94px;
+    font-size: 13px;
+}
+
+.processRow .price a.single {
+    display: none;
+    pointer-events: none;
+    border: none;
+}
+
+.processRow .price a > strong {
+    font-size: 18px;
+}
+
+.processRow .price .payment-discount strong {
+    font-size: inherit;
+}
+
+.payment-discount {
+    font-size: 13px;
+}
+
+.processItem, .processRow .price a {
+    margin-left: 0 !important;
+    margin-right: 10px;
+}
+
+.processItem:last-child, .processRow .price a:last-child {
+    margin-right: 0;
+}
+
+.pr_wrap.without_w_block .poiner {
+    width: 217.75px;
+}
+
+.poiner strong {
+    display: inline-block;
+    margin: 2px 3px 0;
+}
+
+.processRow .noteAlert .ckeditor {
+    padding: 7px 10px;
+}
+
+.processRow .actionButton {
+    background-color: #2D9CDB;
+    border-radius: 4px;
+    line-height: 2;
+    padding: 0 18px;
+}
+
+.processRow .actionButton.hidden {
+   display: none;
+}
+
+.processRow .noteAlert {
+    padding-left: 32px;
+}
+
+.m_description {
+    color: #000;
+    font-size: 14px;
+    line-height: 16px;
+    margin: 0;
+}
+
+.m_description .m_description__text {
+    padding-left: 16px;
+}
+
+.m_description .m_description__text span {
+    position: static;
+}
+
+.wm_pmnt_new.active {
+    color: #000;
+    font-weight: bold;
+}
+
+.wm_pmnt_new {
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    margin-left: 3px;
+}
+
+.wm_pmnt_new:first-of-type {
+    margin: 0 3px 0 13px;
+}
+
+.pmnt-tab-content {
+    padding-top: 15px;
+}
+
+.__highlighted-text {
+    padding: 8px 10px;
+}
+
+.__highlighted-text .input--checkbox {
+    margin-right: 10px !important;
+}
+
+.__highlighted-text.checked {
+    background: #DBF5DE !important;
+}
+
+.m_description .m_description__text {
+    padding-left: 0;
+}
+
+.currency {
+    height: 26px;
+    line-height: 26px;
+}
+
+.tab-wm-footer {
+    margin-top: 30px;
+}
+
+.clr--green {
+  color: #6fcf97 !important;
+}
+
+.clr--red {
+    color: #FF0000 !important;
+}
+
+.star {
+    color: #ff0000;
+}
+
+.row input,
+.input_custom_file_block 
+{
+    position: relative;
+    padding: 5px 8px;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid #E0E0E0;
+    line-height: 15px;
+    height: 27px;
+    margin-bottom: 10px;
+    box-shadow: none;
+    border-radius: 3px;
+}
+
+.input_custom_file_block {
+    padding: 4px;
+    padding-left: 8px;
+}
+
+.input_custom_file_block p {
+    max-width: calc(100% - 86px);
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.input_custom_file_block label {
+    background: #4ca9e4;
+    color: #fff;
+    font-size: 13px;
+    line-height: 15px;
+    padding: 0px 9px;
+    border-radius: 3px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    float: right;
+    box-sizing: border-box;
+    height: 18px;
+}
+
+.input_custom_file_block input {
+    display: none;
+}
+
+.row h5 {
+    color: #7e7e7e;
+    font-size: 13px;
+    font-weight: normal;
+    padding-bottom: 7px;
+    overflow: hidden;
+}
+
+.row h5 a {
+    float: right;
+    margin-left: 10px;
+}
+
+.success_payment_block {
+    padding: 20px 20px 0;
+    font-size: 14px;
+}
+
+.success_payment_block h3 {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.success_payment_block form {
+    max-width: 400px;
+}
+
+.submit_payment {
+    border: none;
+    outline: none;
+    font-weight: bold;
+    background: none;
+    cursor: pointer;
+}
+
+.cancel_payment {
+    color: #FF0000;
+}
+
+.save_payment {
+    color: #2d9cdb;
+}
+
+.processRow.step-six .pr_title .pr_text em,
+.processRow.step-six .pr_title .pr_text strong
+{
+    display: inline-block;
+}
+
+::-webkit-input-placeholder {
+    color: #D7D7D7;
+}
+
+.error {
+    border-color: #FF0000 !important;
+}
+
+form button {
+    cursor: pointer;
+}
+
+.processRow.step-one .pr_details .pr_wrap .twin, 
+.processRow.step-two .pr_details .pr_wrap .twin,
+.processRow.step-three-payment_type .pr_details .pr_wrap .twin 
+{
+    min-height: 71px;
+}
+
+.processRow {
+    margin: 0 0 10px;
+}
+
+.admin-payment__wrapper.content .heading {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.w_qty a i,
+.qty_small.w_qty a i 
+{
+    line-height: 14px;
+    top: 0;
+}
+
+.qty_small.w_qty a {
+    font-size: 14px;
+    line-height: 32px;
+}
+
+.w_qty a.disabled-minus-btn {
+    cursor: not-allowed;
+}
+
+.go_history {
+    padding-left: 32px;
+}
+
+.go_history a {
+    font-size: 13px;
+}
+
+.payment_done {
+    color: #40A635;
+    font-size: 18px;
+    margin-bottom: 15px;
+    padding: 32px 0 0 32px;
+}
+
+#pmnt_tab-success .payment_done {
+    padding-top: 11px;
+    padding-left: 0 !important;
+}
+
+#pmnt_tab-failed .text {
+    text-align: center;
+    padding-top: 3px;
+}
+
+#pmnt_tab-failed strong {
+    margin-bottom: 7px;
+    display: inline-block;
+}
+
+@media (max-width: 1200px) and (min-width: 992px) {
+    .pr_details .w_qty {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .processRow .noteAlert,
+    .go_history,
+    .payment_done,
+    .pr_wrap 
+    {
+        padding-left: 0;
+    }
+    .pr_wrap.without_w_block .poiner {
+        width: 162.75px;
+    }
+}
+
+@media (max-width: 768px) {
+    .pr_details .w_qty {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .processItem, .processRow .price a {
+        margin-right: 0;
+    }
+    .processRow .noteAlert,
+    .go_history,
+    .payment_done,
+    .pr_wrap 
+    {
+        padding-left: 0;
+    }
+    .pr_wrap.without_w_block .poiner {
+        max-width: 197.75px;
+        width: 100%;
+    }
+    .pr_details .price
+    {
+        margin: 0 !important;
+    }
+    .step-five form {
+        display: block;
+    }
+    .step-five-creds form .column,
+    .step-five form .column 
+    {
+        width: 100% !important;
+    }
+    .step-five form .actionButton {
+        margin-top: 20px !important;
+    }
+    #props_edit_form .actionButton {
+        margin-top: 0 !important;
+        position: relative;
+        top: -5px;
+    }
+    #upload_indiv_form .actionButton,
+    #upload_custom_file_form .actionButton 
+    {
+        margin-top: 10px !important
+    }
+}
+
+@media (max-width: 600px) {
+    .threeBlock,
+    .twoBlock {
+        display: block;
+    }
+    .pr_details .pr_wrap .twin {
+        width: 100%;
+        margin: 0 !important;
+        margin-bottom: 10px !important;
+    }
+    .pr_details .pr_wrap .twin:last-of-type {
+        margin-bottom: 0 !important;
+    }
+    .currency {
+        float: none !important;
+        margin-bottom: 20px;
+    }
+    .n_qty .qty_desc {
+        font-size: 10px;
+    }
+    .pr_details .poiner
+    {
+        margin: 0 10px !important;
+    }
+    .w_nmbr {
+        max-width: 130px;
+    }
+    .pr_wrap.without_w_block .poiner {
+        max-width: 147.75px;
+    }
+    .tab-wm-footer {
+        display: block;
+    }
+    .tab-wm-footer:after {
+        content: ".";
+        display: block;
+        height: 0px;
+        clear: both;
+        visibility: hidden;
+        line-height: 0px;
+        font-size: 0px;
+    }
+}

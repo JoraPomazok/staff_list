@@ -1,0 +1,88 @@
+.coWorkerTemplates span,
+.coWorkerTemplates a.active {
+  color: #000;
+  font-weight: normal;
+}
+
+.coWorkerTemplates a {
+  text-decoration: none;
+  color: #2d9cdb;
+  font-weight: normal;
+}
+
+.coWorkerTemplates a.active {
+  font-weight: bold;
+}
+
+.lw_group_title {
+  background: #f4fafd;
+}
+
+.lw_group_title .t2 {
+  color: #2D9CDB;
+  cursor: pointer;
+}
+
+.lw_group {
+  background: #f6f6f6;
+  display: none;
+}
+
+.lw_group.ui-sortable-placeholder {
+  display: block;
+  visibility: visible !important;
+}
+
+.lw_item.ui-sortable-helper {
+  border: 1px solid #F2F2F2;
+  opacity: 1;
+  background: #fff;
+}
+
+.lw_item.ui-sortable-helper .pstn {
+  color: #2d9cdb;
+}
+
+.lw_item.ui-sortable-helper .fellow {
+  max-width: 420px;
+  width: 420px;
+}
+
+.lw_item.ui-sortable-helper .t1,
+.lw_item.ui-sortable-helper .t2 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 420px;
+  white-space: nowrap;
+}
+
+.lw_item {
+  min-height: 36px;
+}
+
+div.paste_area {
+  display: none;
+  width: 118px;
+  height: 30px;
+  line-height: 33px;
+  border: #bdbdbd dashed 2px;
+  border-radius: 3px;
+  background: #ffffff;
+  text-align: center;
+  /*position: absolute;*/
+  /*margin-left: -95px;*/
+  /*z-index: 9999;*/
+}
+
+div.paste_area.active {
+  border: #2D9CDB dashed 2px;
+}
+
+div.paste_area i {
+  color: #bdbdbd;
+  font-size: 16px
+}
+
+div.paste_area.active i {
+  color: #2D9CDB;
+}

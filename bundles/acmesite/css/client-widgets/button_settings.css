@@ -1,0 +1,558 @@
+@charset "utf-8";
+/* CSS Document */
+
+.fa-whatsapp,
+.fa-vk,
+.fa-slack,
+.fa-skype,
+.fa-twitter,
+.fa-odnoklassniki-square,
+.fa-odnoklassniki,
+.fa-facebook-square,
+.fa-facebook-f,
+.fa-telegram-plane,
+.fa-slack-hash,
+.fa-google-play,
+.fa-app-store,
+.fa-instagram,
+.fa-viber,
+.fa-facebook-messenger
+.fa-facebook-messenger,
+.fa-airbnb,
+.fa-amazon,
+.fa-apple,
+.fa-atlassian,
+.fa-aws,
+.fa-bandcamp,
+.fa-behance,
+.fa-blogger,
+.fa-buffer,
+.fa-confluence,
+.fa-jira,
+.fa-dhl,
+.fa-fedex,
+.fa-discord,
+.fa-discourse,
+.fa-ebay,
+.fa-etsy,
+.fa-evernote,
+.fa-figma,
+.fa-flickr,
+.fa-foursquare,
+.fa-git,
+.fa-github,
+.fa-gitlab,
+.fa-google-drive,
+.fa-hotjar,
+.fa-hubspot,
+.fa-intercom,
+.fa-joomla,
+.fa-line,
+.fa-linkedin-in,
+.fa-mailchimp,
+.fa-medium-m,
+.fa-patreon,
+.fa-paypal,
+.fa-periscope,
+.fa-pinterest,
+.fa-quora,
+.fa-reddit,
+.fa-salesforce,
+.fa-shopify,
+.fa-slideshare,
+.fa-snapchat,
+.fa-spotify,
+.fa-stack-overflow,
+.fa-tiktok,
+.fa-trello,
+.fa-tumblr,
+.fa-twitch,
+.fa-uber,
+.fa-vimeo,
+.fa-weixin,
+.fa-yelp
+{
+    font-family: "Font Awesome 5 Brands", sans-serif !important;
+}
+
+.widget_button.sqr_36 i.fa-envelope {font-size:16px;}
+.widget_button.sqr_36 i.fa-at {font-size:18px;}
+.widget_button.sqr_36 i.fa-question-circle {font-size:19px;}
+.widget_button.sqr_36 i.fa-question {font-size:19px;}
+.widget_button.sqr_36 i.fa-life-ring {font-size:17px;}
+.widget_button.sqr_36 i.fa-bullhorn {font-size:17px;}
+.widget_button.sqr_36 i.fa-bug {font-size:19px;}
+.widget_button.sqr_36 i.fa-graduation-cap {font-size:16px;}
+.widget_button.sqr_36 i.fa-coffee {font-size:18px;}
+.widget_button.sqr_36 i.fa-search {font-size:17px;}
+
+.chrome .widget_button.sqr_36 i.fa-at {vertical-align:-1px;}
+.chrome .widget_button.sqr_36 i.fa-question-circle {vertical-align:-2px;}
+.chrome .widget_button.sqr_36 i.fa-question {vertical-align:-2px;}
+.chrome .widget_button.sqr_36 i.fa-life-ring {vertical-align:-1px;}
+.chrome .widget_button.sqr_36 i.fa-bullhorn {vertical-align:-1px;}
+.chrome .widget_button.sqr_36 i.fa-bug {vertical-align:-2px;}
+.chrome .widget_button.sqr_36 i.fa-graduation-cap {vertical-align:-1px;}
+.chrome .widget_button.sqr_36 i.fa-coffee {vertical-align:-1px;}
+.chrome .widget_button.sqr_36 i.fa-search {vertical-align:0px;}
+
+.mozilla .widget_button.sqr_36 i.fa-envelope {vertical-align:1px;}
+.win.mozilla .widget_button.sqr_36 i.fa-at {padding-right: 1px;}
+.mozilla .widget_button.sqr_36 i.fa-question-circle {vertical-align:-1px;}
+.mozilla .widget_button.sqr_36 i.fa-question {vertical-align:-1px;}
+.mozilla .widget_button.sqr_36 i.fa-life-ring {vertical-align:0px;}
+.mozilla .widget_button.sqr_36 i.fa-bullhorn {vertical-align:0px;}
+.mozilla .widget_button.sqr_36 i.fa-bug {vertical-align:-1px;}
+.mozilla .widget_button.sqr_36 i.fa-graduation-cap {vertical-align:0px;}
+.mozilla .widget_button.sqr_36 i.fa-coffee {vertical-align:0px;}
+.mozilla .widget_button.sqr_36 i.fa-search {vertical-align:1px;}
+.widget_button.sqr_36 i.fa-instagram
+{font-size:20px; position: relative; top: 1.5px;}
+.widget_button.sqr_36 i.fa-whatsapp
+{font-size:20px; position: relative;}
+
+.safari .widget_button.sqr_36 i.fa-envelope {vertical-align:0px;}
+.safari .widget_button.sqr_36 i.fa-at {vertical-align:-1px;}
+.safari .widget_button.sqr_36 i.fa-question-circle {vertical-align:-2px;}
+.safari .widget_button.sqr_36 i.fa-question {vertical-align:-1px;}
+.safari .widget_button.sqr_36 i.fa-life-ring {vertical-align:-1px;}
+.safari .widget_button.sqr_36 i.fa-bullhorn {vertical-align:-1px;}
+.safari .widget_button.sqr_36 i.fa-bug {vertical-align:-2px;}
+.safari .widget_button.sqr_36 i.fa-graduation-cap {vertical-align:-1px;}
+.safari .widget_button.sqr_36 i.fa-coffee {vertical-align:-1px;}
+
+.widget_button.sqr_42 i.fa-envelope {font-size:18px;}
+.widget_button.sqr_42 i.fa-at {font-size:21px;}
+.widget_button.sqr_42 i.fa-question-circle {font-size:22px;}
+.widget_button.sqr_42 i.fa-question {font-size:22px;}
+.widget_button.sqr_42 i.fa-life-ring {font-size:20px;}
+.widget_button.sqr_42 i.fa-bullhorn {font-size:20px;}
+.widget_button.sqr_42 i.fa-bug {font-size:21px;}
+.widget_button.sqr_42 i.fa-graduation-cap {font-size:19px;}
+.widget_button.sqr_42 i.fa-coffee {font-size:21px; padding-left: 1px;}
+.widget_button.sqr_42 i.fa-search {font-size:20px;}
+.widget_button.sqr_42 i.fa-instagram
+{font-size:25px; position: relative; top: 2.5px;}
+.widget_button.sqr_42 i.fa-whatsapp
+{font-size:25px; position: relative;}
+
+.widget_button.str_hor i.fa-envelope {font-size:18px;}
+.widget_button.str_hor i.fa-at {font-size:22px;}
+.widget_button.str_hor i.fa-question-circle {font-size:22px; }
+.widget_button.str_hor i.fa-question {font-size:22px; }
+.widget_button.str_hor i.fa-life-ring {font-size:20px; }
+.widget_button.str_hor i.fa-bullhorn {font-size:20px;}
+.widget_button.str_hor i.fa-bug {font-size:20px;}
+.widget_button.str_hor i.fa-graduation-cap {font-size:19px;}
+.widget_button.str_hor i.fa-coffee {font-size:21px;  }
+.widget_button.str_hor i.fa-search {font-size:19px;}
+
+.widget_button.str_vert i.fa-envelope {font-size:18px;}
+.widget_button.str_vert i.fa-at {font-size:22px;}
+.widget_button.str_vert i.fa-question-circle {font-size:22px;}
+.widget_button.str_vert i.fa-question {font-size:22px;}
+.widget_button.str_vert i.fa-life-ring {font-size:19px;}
+.widget_button.str_vert i.fa-bullhorn {font-size:20px; }
+.widget_button.str_vert i.fa-bug {font-size:21px;}
+.widget_button.str_vert i.fa-graduation-cap {font-size:19px;}
+.widget_button.str_vert i.fa-coffee {font-size:21px; }
+.widget_button.str_vert i.fa-search {font-size:19px; }
+
+.chrome .widget_button.sqr_42 i.fa-at {vertical-align:-1px;}
+.chrome .widget_button.sqr_42 i.fa-question-circle {vertical-align:-2px;}
+.chrome .widget_button.sqr_42 i.fa-question {vertical-align:-2px; padding-right: 1px;}
+.chrome .widget_button.sqr_42 i.fa-life-ring {vertical-align:-1px;}
+.chrome .widget_button.sqr_42 i.fa-bullhorn {vertical-align:-1px;}
+.chrome .widget_button.sqr_42 i.fa-bug {vertical-align:-2px;}
+.chrome .widget_button.sqr_42 i.fa-graduation-cap {vertical-align:-1px;}
+.chrome .widget_button.sqr_42 i.fa-coffee {vertical-align:-1px;}
+
+.mozilla .widget_button.sqr_42 i.fa-envelope {vertical-align:0px;}
+.mozilla .widget_button.sqr_42 i.fa-at {vertical-align:-1px;}
+.mozilla .widget_button.sqr_42 i.fa-question-circle {vertical-align:-2px;}
+.mozilla .widget_button.sqr_42 i.fa-question {vertical-align:-2px;}
+.win.mozilla .widget_button.sqr_42 i.fa-question {vertical-align:-2px; padding-right: 1px;}
+.mozilla .widget_button.sqr_42 i.fa-life-ring {vertical-align:-1px;}
+.mozilla .widget_button.sqr_42 i.fa-bullhorn {vertical-align:-1px;}
+.mozilla .widget_button.sqr_42 i.fa-bug {vertical-align:-2px;}
+.mozilla .widget_button.sqr_42 i.fa-graduation-cap {vertical-align:-1px;}
+.mozilla .widget_button.sqr_42 i.fa-coffee {vertical-align:-1px;}
+.mozilla .widget_button.sqr_42 i.fa-search {vertical-align:0px;}
+
+.safari .widget_button.sqr_42 i.fa-at {vertical-align:-1px;}
+.safari .widget_button.sqr_42 i.fa-question-circle {vertical-align:-2px;}
+.safari .widget_button.sqr_42 i.fa-question {vertical-align:-2px; margin-left:-1px;}
+.safari .widget_button.sqr_42 i.fa-life-ring {vertical-align:-1px;}
+.safari .widget_button.sqr_42 i.fa-bullhorn {vertical-align:-1px;}
+.safari .widget_button.sqr_42 i.fa-bug {vertical-align:-2px;}
+.safari .widget_button.sqr_42 i.fa-graduation-cap {vertical-align:-1px;}
+.safari .widget_button.sqr_42 i.fa-coffee {vertical-align:-1px;}
+
+/* .chrome .widget_button.str_hor i.fa-bug {vertical-align:-1px;} */
+
+/* .mozilla .widget_button.str_hor i.fa-envelope {vertical-align:1px;}
+.win.mozilla .widget_button.str_hor i.fa-life-ring {line-height: 38px;}
+.webkit .widget_button.str_hor i.fa-bug {line-height: 38px;}
+.win.mozilla .widget_button.str_hor i.fa-bug {line-height: 38px;}
+.webkit .widget_button.str_hor i.fa-graduation-cap {line-height: 38px;}
+.mozilla .widget_button.str_hor i.fa-graduation-cap {line-height: 38px;} */
+
+/* .webkit .widget_button.str_hor i.fa-life-ring {padding-top: 1px;} */
+/* .safari .widget_button.str_hor i.fa-bug {vertical-align:-1px;} */
+
+/*.mac.mozilla .widget_button.str_vert i.fa-at {line-height: 36px;}
+.win.mozilla .widget_button.str_vert i.fa-at {line-height: 36px;} */
+/* .mac.mozilla .widget_button.str_vert i.fa-envelope {line-height: 34px;} */
+/* .webkit .widget_button.str_vert i.fa-life-ring {padding-top: 1px;} */
+/* .webkit .widget_button.str_vert i.fa-bug {line-height: 38px;} */
+/* .webkit .widget_button.str_vert i.fa-graduation-cap {line-height: 38px;} */
+/* .mozilla .widget_button.str_vert i.fa-coffee {line-height: 34px;}
+.mozilla .widget_button.str_vert i.fa-search {line-height: 34px;} */
+/* .chrome .widget_button.str_vert i.fa-search {vertical-align:1px;} */
+
+/* .mozilla .widget_button.str_vert i.fa-envelope {vertical-align:1px;}
+.mozilla .widget_button.str_vert i.fa-search {vertical-align:1px;} */
+
+.widget_button.sqr_50 i.fa-envelope {font-size:24px;}
+.widget_button.sqr_50 i.fa-at {font-size:26px;}
+.widget_button.sqr_50 i.fa-question-circle {font-size:27px;}
+.widget_button.sqr_50 i.fa-question {font-size:27px;}
+.widget_button.sqr_50 i.fa-life-ring {font-size:25px;}
+.widget_button.sqr_50 i.fa-bullhorn {font-size:25px;}
+.widget_button.sqr_50 i.fa-bug {font-size:27px;}
+.widget_button.sqr_50 i.fa-graduation-cap {font-size:23px;}
+.widget_button.sqr_50 i.fa-coffee {font-size:25px;}
+.widget_button.sqr_50 i.fa-search {font-size:25px;}
+.widget_button.sqr_50 i.fa-instagram
+{font-size:29px; position: relative; top: 1.5px;}
+
+.widget_button.sqr_50 i.fa-whatsapp
+{font-size:29px; position: relative; top: 0.5px;}
+
+.chrome .widget_button.sqr_50 i.fa-at {vertical-align:-1px;}
+.chrome .widget_button.sqr_50 i.fa-question-circle {vertical-align:-2px;}
+.chrome .widget_button.sqr_50 i.fa-question {vertical-align:-1px; padding-right: 1px;}
+.chrome .widget_button.sqr_50 i.fa-life-ring {vertical-align:-1px;}
+.chrome .widget_button.sqr_50 i.fa-bullhorn {vertical-align:-1px;}
+.chrome .widget_button.sqr_50 i.fa-bug {vertical-align:-2px;}
+.chrome .widget_button.sqr_50 i.fa-graduation-cap {vertical-align:-1px;}
+
+.mozilla .widget_button.sqr_50 i.fa-at {vertical-align:-1px;}
+.mozilla .widget_button.sqr_50 i.fa-question-circle {vertical-align:-2px;}
+.mozilla .widget_button.sqr_50 i.fa-question {vertical-align:-1px; padding-right: 1px;}
+.mozilla .widget_button.sqr_50 i.fa-life-ring {vertical-align:-1px;}
+.mozilla .widget_button.sqr_50 i.fa-bullhorn {vertical-align:-1px;}
+.mozilla .widget_button.sqr_50 i.fa-bug {vertical-align:-2px;}
+.mozilla .widget_button.sqr_50 i.fa-graduation-cap {vertical-align:-1px;}
+
+.safari .widget_button.sqr_50 i.fa-envelope {vertical-align:0;}
+.safari .widget_button.sqr_50 i.fa-at {vertical-align:-1px;}
+.safari .widget_button.sqr_50 i.fa-question-circle {vertical-align:-2px; margin-left:0px;}
+.safari .widget_button.sqr_50 i.fa-question {vertical-align:-2px; margin-left:-1px;}
+.safari .widget_button.sqr_50 i.fa-life-ring {vertical-align:-1px;}
+.safari .widget_button.sqr_50 i.fa-bullhorn {vertical-align:-1px;}
+.safari .widget_button.sqr_50 i.fa-bug {vertical-align:-2px;}
+.safari .widget_button.sqr_50 i.fa-graduation-cap {vertical-align:-1px;}
+.safari .widget_button.sqr_50 i.fa-coffee {vertical-align:0px;}
+.safari .widget_button.sqr_50 i.fa-search {vertical-align:0px;}
+
+.messengers_widget_50 .widget_button.messenger_link {margin-bottom: 10px; width: 50px;}
+.messengers_widget_50 .widget_button.messenger_link.messenger_link_last {margin-bottom: 20px}
+
+.messengers_widget_42 .widget_button.messenger_link {margin-bottom: 8px; width: 42px;}
+.messengers_widget_42 .widget_button.messenger_link.messenger_link_last {margin-bottom: 16px}
+
+.messengers_widget_36 .widget_button.messenger_link {margin-bottom: 6px; width: 36px;}
+.messengers_widget_36 .widget_button.messenger_link.messenger_link_last {margin-bottom: 12px}
+.widget_button.messenger_link a {
+    color: #ffffff;
+    position: relative;
+    z-index: 1;
+    display: block;
+    height: 100%;
+}
+
+
+.widget_button.messenger_fb       {background: #3884F7;}
+.widget_button.messenger_vk       {background: #4C75A3;}
+.widget_button.messenger_tg       {background: #53A3DB;}
+.widget_button.messenger_viber    {background: #8074D6;}
+.widget_button.messenger_skype    {background: #6F9FD0;}
+.widget_button.messenger_whatsapp {background: #7DC664;}
+.widget_button.messenger_instagram {background: #CB0282;}
+.widget_button.messenger_tw       {background: #4CA0EC;}
+.widget_button.messenger_intagram {background: #CF4C90;}
+.widget_button.messenger_slack {background: #516CC0;}
+.widget_button.messenger_ok {background: #F58220;}
+.widget_button.messenger_chat {background: #da567a;}
+.widget_button.messenger_close {border: 1px solid #DADADA ; background: #ffffff;}
+.widget_button.messenger_close i {color: #cfcfcf}
+
+.messenger_text {line-height: 14px; text-align: center}
+.messenger_text.sqr_36 {width: 36px}
+.messenger_text.sqr_42 {width: 42px}
+.messenger_text.sqr_50 {width: 50px}
+.messenger_text a {color: #24669f; font-family: Arial, sans-serif; font-size: 8px; margin-left: 1px;}
+.messenger_text.sqr_50 a {color: #24669f; font-family: Arial, sans-serif; font-size: 9px}
+
+
+.widget_button.sqr_36.messenger_emails   {font-size: 16px;}
+.widget_button.sqr_36.messenger_fb       {font-size: 17px;}
+.widget_button.sqr_36.messenger_vk       {font-size: 16px;}
+.widget_button.sqr_36.messenger_tg       {font-size: 18px;}
+.widget_button.sqr_36.messenger_viber    {font-size: 17px; line-height: 38px;}
+.widget_button.sqr_36.messenger_skype    {font-size: 18px; line-height: 38px;}
+.widget_button.sqr_36.messenger_whatsapp {font-size: 20px;}
+.widget_button.sqr_36.messenger_slack    {font-size: 16px; line-height: 38px;}
+.widget_button.sqr_36.messenger_tw       {font-size: 18px; line-height: 38px;}
+.widget_button.sqr_36.messenger_intagram {font-size: 17px;}
+.widget_button.sqr_36.messenger_close    {width: 36px; height: 36px; line-height: 36px}
+
+.widget_button.sqr_42.messenger_emails   {font-size: 20px; line-height: 40px;}
+.widget_button.sqr_42.messenger_fb       {font-size: 21px;}
+.widget_button.sqr_42.messenger_vk       {font-size: 20px;}
+.widget_button.sqr_42.messenger_tg       {font-size: 22px; line-height: 44px;}
+.widget_button.sqr_42.messenger_viber    {font-size: 20px; line-height: 42px;}
+.widget_button.sqr_42.messenger_skype    {font-size: 22px; line-height: 44px;}
+.widget_button.sqr_42.messenger_whatsapp {font-size: 24px;}
+.widget_button.sqr_42.messenger_slack    {font-size: 20px; line-height: 44px;}
+.widget_button.sqr_42.messenger_tw       {font-size: 22px; line-height: 44px;}
+.widget_button.sqr_42.messenger_intagram {font-size: 21px;}
+.widget_button.sqr_42.messenger_close    {width: 42px; height: 42px; line-height: 42px;}
+
+.widget_button.sqr_50.messenger_emails   {font-size: 24px;}
+.widget_button.sqr_50.messenger_fb       {font-size: 25px;}
+.widget_button.sqr_50.messenger_vk       {font-size: 24px;}
+.widget_button.sqr_50.messenger_tg       {font-size: 27px; line-height: 52px;}
+.widget_button.sqr_50.messenger_viber    {font-size: 25px; line-height: 50px;}
+.widget_button.sqr_50.messenger_skype    {font-size: 26px;}
+.widget_button.sqr_50.messenger_whatsapp {font-size: 28px;}
+.widget_button.sqr_50.messenger_slack    {font-size: 24px; line-height: 52px;}
+.widget_button.sqr_50.messenger_tw       {font-size: 26px; line-height: 52px;}
+.widget_button.sqr_50.messenger_intagram {font-size: 25px;}
+.widget_button.sqr_50.messenger_close    {width: 50px; height: 50px; line-height: 50px;}
+
+.widget_help,#widget_help_tmp {font-family:Arial, Helvetica, sans-serif; max-width: 400px; border: 1px solid #ffffff; background-color: #ffffff; display: none; word-break: break-word;}
+.widget_help.sqr_36 {font-size: 13px; line-height: 16px; min-height: 16px; border-radius:4px; padding: 9px 12px;}
+.widget_help.sqr_42 {font-size: 14px; line-height: 18px; min-height: 20px; border-radius:6px; padding: 10px 16px;}
+.widget_help.sqr_50 {font-size: 16px; line-height: 20px; min-height: 20px; border-radius:8px; padding: 14px 20px;}
+
+/*.widget_help.pos_ra.sqr_36 {margin-right: 12px}*/
+/*.widget_help.pos_ra.sqr_42 {margin-right: 16px}*/
+/*.widget_help.pos_ra.sqr_50 {margin-right: 20px}*/
+/*.widget_help.pos_la.sqr_36 {margin-left: 12px}*/
+/*.widget_help.pos_la.sqr_42 {margin-left: 16px}*/
+/*.widget_help.pos_la.sqr_50 {margin-left: 20px}*/
+
+
+/*.widget_help.pos_ra {float: left}*/
+/*.widget_help.pos_la {float: right}*/
+/*.widget_init_button_la {float: right}*/
+/*.widget_init_button_ra {float: left}*/
+
+.widget_button.messenger_tg i {
+    margin-left: -1px;
+}
+.widget_button.sqr_36.messenger_viber i {
+    position: relative;
+    top: -1px;
+    left: 0.5px;
+}
+.widget_button.messenger_slack i {
+    top: -1px;
+    position: relative;
+}
+body.pos_right #chatra.chatra--expanded {
+    right: 2px !important;
+    left: auto !important;
+}
+body.pos_left #chatra.chatra--expanded {
+    right: 40px !important;
+}
+#chatra__iframe-wrapper{ box-shadow: none !important; border:solid 1px rgba(0,0,0,0.2);}
+#vk_community_messages {display: none}
+body.pos_right #vk_community_messages {right: -26px !important;}
+body.pos_left  #vk_community_messages {right: inherit !important; left: -24px;}
+
+body.full_screen.pos_right .widget_init_button {right: 25px !important; bottom: 25px; position: absolute;}
+body.full_screen.pos_left  .widget_init_button {left:  25px !important; bottom: 25px; position: absolute;}
+
+body.full_screen.pos_right .messengers_containers {right: 25px !important; bottom: 0px; position: absolute;}
+body.full_screen.pos_left  .messengers_containers {left:  25px !important; bottom: 0px; position: absolute;}
+
+body.full_screen.pos_right #vk_community_messages {right: 0px !important;}
+body.full_screen.pos_left  #vk_community_messages {right: inherit !important; left: inherit;}
+body.full_screen #vk_community_messages {z-index: 999 !important;}
+
+/*FB CHAT*/
+#fb_community_messages{
+    /*display:none; width: 400px*/
+    width: 300px !important;
+    height: 399px !important;
+    position: absolute; top: -10000px;
+}
+div#fb-root .fb_dialog.fb_dialog_advanced.fb_shrink_active{display: none !important;}
+#fb_community_messages iframe {bottom: 0 !important;border-bottom-left-radius: 0 !important;border-bottom-right-radius: 0 !important;width: 300px !important;height: 399px !important;overflow: hidden !important;display: none;box-shadow: 0 0 0 1px rgba(0,20,51,.12), 0 1px 1px 0 rgba(0,0,0,.3); !important;right: 1px !important;}
+
+body.widget_messengers_mail.is_help {
+    overflow: hidden;
+}
+
+.widget_init_button[class*="sqr"] {
+    position: absolute;
+    bottom: 0;
+    border: 1px solid #DADADA;
+    box-sizing: border-box;
+}
+
+.messengers_containers {
+    position: absolute;
+    bottom: 23px;
+}
+
+.messengers_containers.messengers_widget_50,
+.messengers_containers.messengers_widget_42
+{
+    bottom: 26px;
+}
+
+.messengers_containers .widget_button.messenger_link,
+.widget_button.messenger_close,
+.widget_init_button[class*="sqr"]
+{
+    border: 1px solid transparent;
+    position: relative;
+    box-sizing: border-box;
+    margin-left: 1px;
+}
+
+
+
+.messengers_containers .widget_button.messenger_link:before,
+.widget_button.messenger_close:before,
+.widget_init_button[class*="sqr"]:before
+{
+    position:absolute;
+    content:'';
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    top: -2px;
+    left: -2px;
+    border: 1px solid #fff;
+    opacity: 0;
+    display: block;
+    border-radius: inherit;
+}
+
+.widget_button.messenger_close:before
+{
+    border: 1px solid #DADADA;
+    opacity: 1;
+}
+
+.messengers_containers .widget_button.messenger_link.sqr_50:before,
+.messengers_containers .widget_button.messenger_close.sqr_50:before,
+.widget_init_button[class*="sqr"].sqr_50:before
+{
+    border-radius: 9px;
+}
+
+.messengers_containers .widget_button.messenger_link.sqr_42:before,
+.messengers_containers .widget_button.messenger_close.sqr_42:before,
+.widget_init_button[class*="sqr"].sqr_42:before
+{
+    border-radius: 7px;
+}
+
+.messengers_containers .widget_button.messenger_link.sqr_36:before,
+.messengers_containers .widget_button.messenger_close.sqr_36:before,
+.widget_init_button[class*="sqr"].sqr_36:before
+{
+    border-radius: 5px;
+}
+
+body.is_help.pos_right .widget_init_button_ra {
+    right: 1px;
+}
+
+body.pos_right .widget_init_button_ra {
+    margin-top: 1px;
+}
+
+.widget_button_tip {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    color: #000;
+    background: #fff;
+    box-sizing: border-box;
+    /* max-width: 185px; */
+    white-space: nowrap;
+    /* overflow: hidden; */
+    /* text-overflow: ellipsis; */
+    font-family: Arial, sans-serif;
+    animation: fade .5s ease-in-out;
+}
+
+.widget_button_tip.single_line {
+    max-width: 185px;
+    white-space: nowrap;
+}
+
+.widget_button_tip.few_lines {
+    max-width: 185px;
+    min-width: 185px;
+    white-space: normal;
+}
+
+.widget_button_tip.pos_ra.sqr_36 {right: 36px; margin-right: 12px;}
+.widget_button_tip.pos_la.sqr_36  {left: 36px; margin-left: 12px;}
+
+.widget_button_tip.pos_ra.sqr_42 {right: 42px; margin-right: 16px;}
+.widget_button_tip.pos_la.sqr_42  {left: 42px; margin-left: 16px;}
+
+.widget_button_tip.pos_ra.sqr_50 {right: 50px; margin-right: 20px;}
+.widget_button_tip.pos_la.sqr_50  {left: 50px; margin-left: 20px;}
+
+.widget_button_tip.sqr_36 {
+    font-size: 13px; line-height: 16px; min-height: 16px; border-radius:4px; padding: 4px 9px;
+}
+
+.widget_button_tip.sqr_42 {
+    font-size: 14px; line-height: 18px; min-height: 20px; border-radius:6px; padding: 6px 11px;
+}
+
+.widget_button_tip.sqr_50 {
+    font-size: 16px; line-height: 20px; min-height: 20px; border-radius:8px; padding: 8px 13px;
+}
+
+body.pos_right .messengers_containers {
+    right: 1px;
+}
+
+body.pos_right .messengers_containers.messengers_widget_42 {
+    right: 2px;
+}
+
+.widget_button.sqr_42 i.fa-life-ring,
+.widget_button.sqr_42 i.fa-at
+{font-weight: 400;}
+
+@media (max-device-width: 600px) {
+    .widget_help, #widget_help_tmp {
+        box-sizing: border-box;
+    }
+    .widget_help.sqr_36,
+    #widget_help_tmp.sqr_36 {
+        max-width: calc(100vw - 88px);
+    }
+    .widget_help.sqr_42,
+    #widget_help_tmp.sqr_42 {
+        max-width: calc(100vw - 98px);
+    }
+    .widget_help.sqr_50,
+    #widget_help_tmp.sqr_50 {
+        max-width: calc(100vw - 110px);
+    }
+}

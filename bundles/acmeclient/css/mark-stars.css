@@ -1,0 +1,42 @@
+.btn-mark {
+	left: -2px;
+	font-size: 18px;
+	top: 11px;
+}
+.actionBlock .btn-mark{
+	line-height: unset;
+	font-size: 18px;
+	top: 11px;
+}
+
+.lang_support_list .actionBlock .btn-mark{
+	line-height: unset;
+	font-size: 18px;
+	top: 11px;
+}
+
+.btn-mark.btn-activated{
+	color:#eead5f;
+}
+.lang_support_list .btn-mark.btn-activated{
+	top: 11px;
+}
+.btn-mark.btn-activated .i-activated:before{visibility:visible;}
+.btn-mark .i-activated:before{
+	position:absolute;
+	visibility:hidden;
+	left:0;
+	top:0;
+}
+.btn-mark.btn-activated:before{visibility:hidden;}
+
+.lw_item:not(.fllw_off) .btn-mark.fa-star:hover,
+.i-activated {
+	color:#eead5f;
+}
+
+.fllw_off.fllw_off .btn-mark.fa-star:hover {
+	cursor: not-allowed;
+}
+
+.lw_item.fllw_off .btn-mark.btn-activated:hover .i-activated:before{color:#B6B6B6;}

@@ -1,0 +1,236 @@
+.macros .t1,
+.macros .t2 {
+    /* width:620px; */
+}
+
+.macros .acrWrap {
+    margin-bottom: 20px;
+}
+
+.macros .acrWrap .row textarea {
+    margin: 0 0 -2px;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 0) {
+    .macros .acrWrap .row textarea {
+        margin: 0 0 -5px;
+    }
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 0) {
+    .macros .fx_m {
+        margin: -26px 0 0;
+    }
+}
+
+.macros .acrItem .letters_content .text {
+    height: 8px;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 0) {
+    .macros .acrItem .letters_content .text {
+        height: 7px;
+    }
+}
+
+.coWorkerTemplates span, .coWorkerTemplates a.active {
+    color: #000;
+    font-weight: normal;
+}
+
+.coWorkerTemplates a {
+    text-decoration: none;
+    color: #2d9cdb;
+    font-weight: normal;
+}
+
+.coWorkerTemplates a.active {
+    font-weight: bold;
+}
+
+.sort_field_header {
+    background-color: #f6f6f6;
+    height: 25px;
+}
+
+.sort_field_header.-active span {
+    color: #2d9cdb;
+}
+.sort_fields_wrap .sort_field_heade.-active,
+.alpha5_header.-active,
+.sort_field_header.-active {
+    border-bottom: 1px solid rgb(233, 235, 237);
+}
+
+.sort_field_header span {
+    font-size: 18px;
+    color: #BDBDBD;
+    margin: 0 16px;
+    line-height: 1.5;
+}
+
+.alpha5_header span.fa-chevron-right {
+    color: #2d9cdb;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.sort_field_header:hover span {
+    color: #2d9cdb;
+}
+
+.sort_field_header:hover {
+    cursor: pointer;
+}
+
+.sort_field_header [class^="icon-"]:before,
+.sort_field_header [class*=" icon-"]:before {
+    cursor: pointer;
+}
+
+.sort_field_header h5 {
+    float: left;
+    margin: 0 16px;
+    /* text-transform: uppercase; */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    color: #767677;
+    line-height: 25px;
+}
+
+.win.mozilla .sort_field_header h5 {
+    line-height: 25px;
+}
+
+/* .sort_field_header span {
+    float: right;
+    color: #83898f;
+    font-size: 18px;
+    margin: 0 16px;
+    line-height: 24px;
+} */
+
+.win.mozilla .sort_field_header span {
+    line-height: 26px;
+}
+
+.scndItem.scnd-set_subject {
+    width: 100%;
+}
+
+.scndItem.scnd-set_subject input {
+    width: 100%;
+    padding-right: 5px
+}
+
+.css_cf_date input.action_field_class {
+
+    display: block;
+    padding-right: 10px;
+    float: right;
+    /*width: 300px;*/
+}
+
+.css_cf_date .input_calendar_ico input {
+    cursor: pointer;
+}
+
+.css_cf_date input.action_field_class {
+    /*width: 290px !important;*/
+
+}
+
+.css_cf_date .input_calendar_ico i {
+    margin-right: 0;
+}
+
+.input_calendar_ico ~ span {
+    display: none;
+}
+
+.cf_date_add_days ~ span::after,
+.input_calendar_ico ~ span::after {
+    content: 'дней';
+    float: right;
+    margin: -22px 10px 0;
+
+}
+
+.set_reopen_short {
+    width: 90px !important;
+}
+
+.set_reopen_text {
+    display: block;
+    /*float: right;*/
+    /*width: 350px !important;*/
+}
+
+.lst-set_reopen {
+    width: 100%;
+}
+
+.set_reopen_text + span {
+    /*float: right;*/
+    /*margin: -22px 10px 0;*/
+}
+
+.set_reopen_text + span a {
+    color: #2d9cdb;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.set_reopen_text + span a {
+    color: #2d9cdb;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.set_reopen_text + span a.active {
+    color: #000000;
+    font-weight: bold;
+}
+
+.row-ckeditor.note .redactor-box .redactor-layer {
+    background: #fffae9;
+}
+
+.lst-set_reopen .redactor-box .redactor-layer {
+    background: #fffae9;
+    padding: 10px !important;
+}
+
+.note_with_mentions {
+    width: 100%;
+    padding: 0 10px;
+}
+
+.lst-set_reopen .redactor-box {
+    /*margin: 10px 0 !important;*/
+}
+
+.redactor-layer {
+    overflow-y: auto
+}
+
+/*@media (max-width: 1200px) and (min-width: 992px) {*/
+/*    .macros .row__wrapper {*/
+/*        flex-direction: column;*/
+/*    }*/
+/*    .macros .row__wrapper .js-visibility_group_id,*/
+/*    .macros .row__wrapper .js-visibility_staff_id {*/
+/*        margin-top: 10px;*/
+/*    }*/
+/*}*/
+
+/*@media (max-width: 768px) {*/
+/*    .macros .row__wrapper {*/
+/*        flex-direction: column;*/
+/*    }*/
+/*    .macros .row__wrapper .js-visibility_group_id,*/
+/*    .macros .row__wrapper .js-visibility_staff_id {*/
+/*        margin-top: 10px;*/
+/*    }*/
+/*}*/

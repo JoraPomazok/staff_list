@@ -1,0 +1,44 @@
+a.btn-help {
+    position: relative;
+    background: #83898F;
+    border-radius: 3px;
+    color: #4F4F4F;
+    display: block;
+    font-size: 18px;
+    height: 30px;
+    position: relative;
+    text-align: center;
+    width: 30px;
+}
+.menu ul li a.btn-help {
+    color: #383f47;
+	position:relative;
+	transition: background .25s ease-in-out;
+   -moz-transition: background .25s ease-in-out;
+   -webkit-transition: background .25s ease-in-out;
+}
+.menu ul li a.btn-help:hover,
+.menu ul li a.btn-help.pp_open{background:#fff;}
+a.btn-help i {
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  font-size: 13px;
+  position: relative;
+  /* transform: translate(-50%, -50%); */
+}
+
+.menu .fa-question {
+    font-size: 13px;
+    padding-left: 2px;
+}
+
+a.btn-help i::before {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.force-login .fa-user {
+  line-height: 0.9;
+}

@@ -1,0 +1,25 @@
+/* 09_schedule_demo */
+
+#wrap {
+    height: 100%;
+}
+
+.top-info-demo {
+    box-sizing: border-box;
+    min-height: 92%;
+    padding-bottom: 90px;
+}
+
+/* success */
+
+.schedule-success {
+	  width: 100%;
+    box-sizing: border-box;
+    min-height: 92%;
+    padding-bottom: 90px;
+}
+
+.footer-box, .garant {
+	height: 80px;
+	margin-top: -80px;
+}

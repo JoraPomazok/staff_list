@@ -1,0 +1,625 @@
+/*btn*/
+var b_init_hover = false;
+var chat_checker_interval = false;
+var chat_checker_interval_ = false;
+var help_w = 0;
+var help_h = 0;
+var vk_trigger_click;
+var b_full_screen = false;
+var vk_widget_err = false;
+var identify_arr = {};
+var animation_speed = 50;
+var block_changes = false;
+$(document).ready(function () {
+    setTimeout(function () {
+        parent.window.postMessage('{"act" : "loaded_btn","widget_id" : "' + widget_id + '"}', '*');
+    }, 500);
+
+    /********INIT************************/
+    if (button_type == 'line') {
+        $('<span>').attr('id', 'tmp_count').css({
+            'position': 'absolute',
+            'visibility': 'hidden',
+            'height': 'auto',
+            'width': 'auto',
+            'white-space': 'nowrap',
+            'font-size': '15px',
+            'padding': '0 21px 0 52px'
+        }).html($('.widget_button p').text()).appendTo('body');
+        var w = $('#tmp_count').get(0).clientWidth + 2;
+        w = w > 180 ? w : 180;
+        w = w < 400 ? w : 400;
+        $('#tmp_count').remove();
+        $('.widget_button').css('width', w + 'px');
+        parent.window.postMessage('{"act" : "resize_button", "value" : "' + $('.widget_button').width() + '", "widget_id" : "' + widget_id + '"}', '*');
+    }
+    parent.window.postMessage(JSON.stringify(widget_settings), '*');
+    if ($('.messengers_containers').length) {
+        $(document).on('click', '.widget_init_button', function () {
+            b_open_widget = true;
+            $('.widget_init_button').hide('fade', {}, animation_speed, function () {
+                CloseHelp(function () {
+                    parent.window.postMessage('{"act" : "init_widget","widget_id" : "' + widget_id + '"}', '*');
+                    $('.messengers_containers').show('fade', {});
+                });
+
+            });
+
+        });
+        $(document).on('click', '.messenger_close', function () {
+            $('.messengers_containers').hide('fade', {}, animation_speed, function () {
+                parent.window.postMessage('{"act" : "messenger_close","widget_id" : "' + widget_id + '"}', '*');
+                $('.widget_init_button').show('fade');
+                if (b_help) {
+                    ShowHelp();
+                }
+            });
+            b_open_widget = false;
+        });
+        $(document).on('click', '.messenger_emails', function () {
+            $('.messengers_containers').hide('fade', {}, animation_speed, function () {
+                $('.widget_init_button').show('fade');
+                parent.window.postMessage('{"act" : "init_widget","b_open_widget" : "1","widget_id" : "' + widget_id + '","type":"mail"}', '*');
+            });
+            return false;
+        });
+        $(document).on('click', '.messenger_idea', function () {
+            $('.messengers_containers').hide('fade', {}, animation_speed, function () {
+                $('.widget_init_button').show('fade');
+                parent.window.postMessage('{"act" : "init_widget","b_open_widget" : "1","widget_id" : "' + widget_id + '","type":"idea"}', '*');
+            });
+            return false;
+        });
+        $(document).on('click', '.messenger_knowledge', function () {
+            $('.messengers_containers').hide('fade', {}, animation_speed, function () {
+                $('.widget_init_button').show('fade');
+                parent.window.postMessage('{"act" : "init_widget","b_open_widget" : "1","widget_id" : "' + widget_id + '","type":"knowledge"}', '*');
+            });
+            return false;
+        });
+        $(document).on('click', 'div.link_channel_', function () {
+            if (!$(this).hasClass('messenger_emails') || !$(this).hasClass('messenger_chat')) {
+                block_changes = true;
+            }
+            if ($(this).hasClass('messenger_emails') ||
+                $(this).hasClass('messenger_idea') ||
+                $(this).hasClass('messenger_knowledge') ||
+                $(this).hasClass('messenger_chat') ||
+                ($(this).hasClass('messenger_vk') && chat_vk && !vk_widget_err) ||
+                ($(this).hasClass('messenger_fb') && chat_fb)
+            ) {
+                return false
+            }
+            cnt_show_help = 1;
+            cnt_showed_help = 2;
+            CloseHelp();
+            if ($(this).find('a').attr('data-ya-target')) {
+                YaTarget($(this).find('a').attr('data-ya-target'));
+            }
+            parent.window.postMessage('{"act" : "link_click","widget_id" : "' + widget_id + '", "href":"' + $(this).find('a').attr('href') + '"}', '*');
+            return false;
+        });
+    } else {
+        $(document).on('click', '.widget_init_button', function () {
+            b_open_widget = true;
+            CloseHelp(function () {
+                parent.window.postMessage('{"act" : "init_widget","widget_id" : "' + widget_id + '"}', '*');
+            });
+        });
+    }
+
+    if (b_help) {
+        var clone = $('.widget_help').clone();
+        clone.css({
+            'position': 'absolute',
+            'top': '-9999px',
+            'bottom': 'auto',
+            'display': 'block'
+        }).attr('id', 'widget_help_tmp'); //.removeClass('widget_help');
+        $('body').append(clone);
+        help_w = $('#widget_help_tmp').outerWidth(true) + 5;
+        help_h = $('#widget_help_tmp').outerHeight();
+
+        ShowHelp();
+    }
+    //////////////////////////////////////////
+    if (chat_type == 'chatra' && chat_key) {
+        setTimeout(function () {
+            var chatra_i_data = {
+                'omni_group_id': widget_settings['settings']['group_id'],
+                // 'omni_real_location':g_page_location
+            };
+            if (identify_arr.user_full_name) {
+                chatra_i_data['name'] = decodeURIComponent(identify_arr.user_full_name);
+            }
+            if (identify_arr.user_email) {
+                chatra_i_data['email'] = decodeURIComponent(identify_arr.user_email);
+            }
+            if (identify_arr.user_phone) {
+                chatra_i_data['phone'] = decodeURIComponent(identify_arr.user_phone);
+            }
+            parent.window.postMessage(JSON.stringify({
+                "act": "init_chatra_chat",
+                "widget_id": widget_id,
+                "chat_key": chat_key,
+                "chatra_group": widget_settings.settings.channels_list.chat.chatra_group || null,
+                'chatra_i_data': chatra_i_data
+            }), '*');
+        }, 1000);
+
+        // window.ChatraSetup = {
+        // 	startHidden: true,
+        //    onAnalyticEvent: function(eventName) {
+        //        if(eventName.match(/Targeted chat shown/))
+        // 		{
+        // 			$('.widget_init_button').hide('fade', {}, animation_speed, function () {
+        // 				$('.messenger_chat').trigger('click');
+        // 			});
+        // 		}
+        //    }
+        // };
+        // if(widget_settings.settings.channels_list.chat.chatra_group)
+        // {
+        //    window.ChatraSetup['groupId'] = widget_settings.settings.channels_list.chat.chatra_group;
+        // }
+        //
+        // (function (d, w, c)
+        // {
+        // 	w.ChatraID = chat_key;
+        // 	var s = d.createElement('script');
+        // 	w[c] = w[c] || function ()
+        // 		{
+        // 			(w[c].q = w[c].q || []).push(arguments);
+        // 		};
+        // 	s.async = true;
+        // 	s.src = (d.location.protocol === 'https:' ? 'https:' : 'http:')
+        // 		+ '//call.chatra.io/chatra.js';
+        // 	if (d.head) d.head.appendChild(s);
+        // })(document, window, 'Chatra');
+    }
+
+    if (chat_vk) {
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = (document.location.protocol === 'https:' ? 'https:' : 'http:') +
+            '//vk.com/js/api/openapi.js?141';
+        if (document.head) document.head.appendChild(s);
+        var vk_interval = setInterval(function () {
+            if (!window.VK)
+                return;
+            clearInterval(vk_interval);
+            window._omni_vk_chat = VK.Widgets.CommunityMessages("vk_community_messages", chat_vk, {
+                disableExpandChatSound: "1",
+                disableButtonTooltip: "1",
+                expanded: "1"
+            });
+        }, 1000);
+    }
+    if (chat_fb) {
+        // var s = document.createElement('script');
+        // s.async = true;
+        // s.src = (document.location.protocol === 'https:' ? 'https:' : 'http:')
+        //    + '//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9';
+        // // + '//connect.facebook.net/en_US/sdk/debug.js';
+        // if (document.head) document.head.appendChild(s);
+        // var tmp_i_fb=0;
+        // var fb_interval =setInterval(function ()
+        // {
+        //
+        //     if($('div#fb_community_messages iframe').length)
+        //     {
+        //         $('div#fb_community_messages iframe').css('display', 'none');
+        //
+        //         if (tmp_i_fb>20)
+        //         {
+        //             clearInterval(fb_interval);
+        //         }
+        //         tmp_i_fb++;
+        //     }
+        // },100);
+        parent.window.postMessage('{"act" : "init_fb_chat","widget_id" : "' + widget_id + '", "fb_page_id":"' + chat_fb + '"}', '*');
+
+    }
+
+    ////////*///////////////////////////////////////
+    $(document).on('click', '.messenger_vk', vk_trigger_click = function () {
+        if (window.VK && !vk_widget_err) {
+
+            window._omni_vk_chat.expand();
+            $('.messengers_containers').hide('fade', {}, animation_speed, function () {
+                parent.window.postMessage('{"act" : "btn_resize","widget_id" : "' + widget_id + '", "nw":"322","nh":"480","bottom":"0px"}', '*');
+                $('div#vk_community_messages').show();
+            });
+        }
+
+        return false;
+    });
+    $(document).on('click', '.messenger_fb', function () {
+        if (chat_fb) {
+            $('.messengers_containers').hide('fade', {}, animation_speed, function () {
+                parent.window.postMessage('{"act" : "update_size_btn","widget_id" : "' + widget_id + '"}', '*');
+
+                $('.widget_init_button').show('fade');
+
+                parent.window.postMessage('{"act" : "fb_chat_open","widget_id" : "' + widget_id + '"}', '*');
+
+            });
+        }
+        return false;
+    });
+    $(document).on('click', '.messenger_chat', function () {
+
+        $('.messengers_containers').hide('fade', {}, animation_speed, function () {
+            parent.window.postMessage('{"act" : "messenger_close","widget_id" : "' + widget_id + '"}', '*');
+            $('.widget_init_button').show('fade');
+            if (b_help) {
+                ShowHelp();
+            }
+        });
+        b_open_widget = false;
+        parent.window.postMessage(JSON.stringify({
+            "act": "chatra_chat_open",
+            "widget_id": widget_id,
+        }), '*');
+        // if(window.Chatra)
+        // {
+        // 	$('.messengers_containers').hide('fade', {}, animation_speed, function ()
+        // 	{
+        // 		if(chat_checker_interval_)
+        // 		{
+        // 			clearInterval(chat_checker_interval_);
+        // 		}
+        //        if(Chatra._isMobile)
+        // 		{
+        //            FullScreen(true);
+        // 		}
+        // 		else
+        //        {
+        //            parent.window.postMessage('{"act" : "btn_resize","widget_id" : "' + widget_id + '", "nw":"340","nh":"480","bottom":"0px"}', '*');
+        //        }
+        // 		Chatra('openChat',window)
+        // 		$('div#chatra').show();
+        // 		Chatra('show');
+        // 		setTimeout(function ()
+        // 		{
+        // 			chat_checker_interval = setInterval(function ()
+        // 			{
+        // 				if (!Chatra._chatExpanded)
+        // 				{
+        // 					clearInterval(chat_checker_interval);
+        // 					$('div#chatra').hide();//Chatra('hide');
+        // 					parent.window.postMessage('{"act" : "update_size_btn","widget_id" : "' + widget_id + '"}', '*');
+        //                    FullScreen(false);
+        // 					$('.widget_init_button').show('fade');
+        // 					if (b_help)
+        // 					{
+        // 						ShowHelp();
+        // 					}
+        // 					checkChatraReply();
+        // 				}
+        // 			}, 100);
+        // 		},500);
+        // 	});
+        // }
+
+        return false;
+
+    });
+    // checkChatraReply();
+
+    var timerId;
+
+    $(".widget_button.messenger_link a").hover(
+        function () {
+            if (block_changes) { // если нажато на иконку канала, не обновлять размер виджета
+                // if($('#vk_community_messages').is(':hidden')) {
+                block_changes = false;
+                // }
+                return
+            }
+
+            clearInterval(timerId);
+
+            let container = $(this).parent();
+            // let tip_margin = parseFloat(container.find('.widget_button_tip').css('margin-right')) + parseFloat(container.find('.widget_button_tip').css('margin-left'));
+            // let tip_w = container.outerWidth() + container.find('.widget_button_tip').outerWidth() + tip_margin + 2;
+            let tip_w = parseFloat("260px"); // выше ширина динамическая, но с ней ловится баг(подергивание виджета), потому ширина всегда должна быть статическая, это не должно быть проблемой тк подсказки работают только при наведении
+            let tip_h = $('.messengers_containers').outerHeight() + parseFloat($('.messengers_containers').css('bottom')) + 2;
+
+            parent.window.postMessage('{"act" : "btn_resize","widget_id" : "' + widget_id + '", "nw": ' + tip_w + ',"nh":"' + tip_h + '","bottom":"0px"}', '*');
+
+            container.find('.widget_button_tip').show();
+
+        },
+        function () {
+            $('.widget_button_tip').hide();
+
+            if (block_changes) { // если нажато на иконку канала, не обновлять размер виджета
+                // if($('#vk_community_messages').is(':hidden')) {
+                block_changes = false;
+                // }
+                return
+            }
+
+            let $this = $(this);
+
+            timerId = setTimeout(function () {
+                let container = $this.parent();
+                let sup_val_w = container.hasClass('sqr_50') ? 4 : 4;
+                let sup_val_h = container.hasClass('sqr_50') ? 3 : 3;
+
+                let tip_w = container.outerWidth() + sup_val_w;
+                let tip_h = 0;
+                let btm = 0;
+                if ($('.messengers_containers').is(':visible')) {
+                    tip_h = $('.messengers_containers').outerHeight() + parseFloat($('.messengers_containers').css('bottom')) + sup_val_h;
+                } else {
+                    tip_h = tip_w - 1;
+                    btm = "25px";
+                }
+
+                parent.window.postMessage('{"act" : "btn_resize","widget_id" : "' + widget_id + '", "nw": ' + tip_w + ',"nh":"' + tip_h + '","bottom":"' + btm + '"}', '*');
+
+            }, 1500);
+        }
+    );
+
+});
+
+function checkChatraReply() {
+    chat_checker_interval_ = setInterval(function () {
+        // console.log(Chatra._chatExpanded,$('#chatra').hasClass('chatra--expanded'));
+        if (Chatra._chatExpanded || $('#chatra').hasClass('chatra--expanded')) {
+            clearInterval(chat_checker_interval_);
+            $('.widget_init_button').hide('fade', {}, animation_speed, function () {
+                $('.messenger_chat').trigger('click');
+
+            });
+        }
+    }, 100);
+
+}
+
+function FullScreen(state) {
+    if (state) {
+        b_full_screen = true;
+        parent.window.postMessage('{"act" : "btn_resize","widget_id" : "' + widget_id + '","b_full_screen":1}', '*');
+        $('body').addClass('full_screen');
+    } else if (b_full_screen) {
+        b_full_screen = false;
+        parent.window.postMessage('{"act" : "btn_resize","widget_id" : "' + widget_id + '","b_exit_full_screen":1}', '*');
+        $('body').removeClass('full_screen');
+    }
+
+}
+
+function listener(event) {
+    //    console.log(event);
+    //vk widget
+    if (typeof event.data == 'string' && event.data.match(/\:\["fatalError",/) && event.origin.match(/vk\.com/)) {
+        vk_widget_err = true;
+        FullScreen(true);
+
+    } else if (typeof event.data == 'string' && event.data.match(/\:\["showBox",/) && event.origin.match(/vk\.com/)) {
+        b_full_screen = true;
+        parent.window.postMessage('{"act" : "btn_resize","widget_id" : "' + widget_id + '","b_full_screen":1}', '*');
+        $('body').addClass('full_screen');
+    } else if (typeof event.data == 'string' && event.data.match(/\:\["destroy",/) && event.origin.match(/vk\.com/) && b_full_screen) {
+        FullScreen(false);
+    } else if (typeof event.data == 'string' && event.data.match(/\:\["minimize",\[\]\]/)) {
+        $('div#vk_community_messages').hide(); //Chatra('hide');
+        parent.window.postMessage('{"act" : "update_size_btn","widget_id" : "' + widget_id + '"}', '*');
+
+        $('.widget_init_button').show('fade');
+        if (b_help) {
+            ShowHelp();
+        }
+    } else if (typeof event.data == 'string' && event.data.match(/\:\["newMessage",\[\]\]/)) {
+        $('.widget_init_button').hide('fade', {}, animation_speed, function () {
+            vk_trigger_click();
+            // $('.messenger_vk').trigger('click');
+        });
+    }
+    //fb widget
+    if (typeof event.data == 'string' && event.data.match(/liveChatPluginHideDialogIframe/)) {
+        $('div#fb_community_messages iframe').hide();
+        parent.window.postMessage('{"act" : "update_size_btn","widget_id" : "' + widget_id + '"}', '*');
+
+        $('.widget_init_button').show('fade');
+        if (b_help) {
+            ShowHelp();
+        }
+    }
+
+    // //chatra
+    // if(typeof event.data == 'string' && event.data.match(/"type"\:"expandWindow",/) && event.origin.match(/chatra\.io/))
+    // {
+    //     // console.log();
+    //     // if(!$('#chatra').hasClass('chatra--expanded'))
+    //     // {
+    //     //     $('.widget_init_button').hide('fade', {}, animation_speed, function () {
+    //     //         $('.messenger_chat').trigger('click');
+    //     //
+    //     //     });
+    //     // }
+    // }
+    // if(typeof event.data == 'string' && event.data.match(/"type"\:"hideChat",/) && event.origin.match(/chatra\.io/))
+    // {
+    // 	if($('#chatra').hasClass('chatra--expanded'))
+    //     {
+    //         Chatra('hide');
+    //         parent.window.postMessage('{"act" : "update_size_btn","widget_id" : "' + widget_id + '"}', '*');
+    //
+    //         $('.widget_init_button').show('fade');
+    //         if (b_help)
+    //         {
+    //             ShowHelp();
+    //         }
+    //     }
+    // }
+    if (event.data == 'gOmniListShow') {
+        $('.widget_init_button').click();
+        return;
+    } else if (event.data == 'gOmniListHide') {
+        $('.messenger_close').click();
+        return;
+    } else if (event.data == 'chatra_hide') {
+        $('div.messenger_chat').addClass('hide').hide();
+        parent.window.postMessage('{"act" : "change_channels_cnt","widget_id" : "' + widget_id + '","channels_cnt":' + ($('div.messengers_containers .widget_button:not(.hide)').length - 1) + '}', '*');
+        return;
+    } else if (event.data == 'chatra_show') {
+        $('div.messenger_chat').removeClass('hide').show();
+        parent.window.postMessage('{"act" : "change_channels_cnt","widget_id" : "' + widget_id + '","channels_cnt":' + ($('div.messengers_containers .widget_button:not(.hide)').length - 1) + '}', '*');
+        return;
+    } else if (event.data == 'show_help') {
+        b_open_widget = false;
+        if (!b_help)
+            return false;
+        if (b_help_type != 'hover')
+            ShowHelp();
+        return;
+    } else if (event.data == 'show_widget') {
+        b_open_widget = true;
+        if ($('.messengers_containers:visible').length) {
+            $('.messengers_containers').hide('fade', {}, animation_speed, function () {
+                parent.window.postMessage('{"act" : "messenger_close","widget_id" : "' + widget_id + '"}', '*');
+                $('.widget_init_button').show('fade');
+                if (b_help) {
+                    ShowHelp();
+                }
+            });
+            b_open_widget = false;
+        } else {
+            CloseHelp(function () {
+                parent.window.postMessage('{"act" : "init_widget","widget_id" : "' + widget_id + '"}', '*');
+                $('.messengers_containers').show('fade', {});
+            }, -1);
+        }
+        return
+    }
+    try {
+        var data = $.parseJSON(event.data);
+        if (data.identify) {
+            identify_arr = data.identify;
+
+        } else if (data.act && data.act == 'set_location') {
+            g_page_location = decodeURIComponent(data.location);
+        }
+    } catch (err) {
+
+    }
+}
+
+function ShowHelp_(b_ignore) {
+
+    if (!b_help)
+        return false;
+    if (cnt_show_help != 'click' && cnt_show_help != 0) {
+        var tmp = parseInt(cnt_show_help);
+        if (cnt_showed_help >= tmp) {
+            parent.window.postMessage('{"act" : "update_size_btn","widget_id" : "' + widget_id + '"}', '*');
+            b_help = false;
+            return;
+        }
+    }
+
+    parent.window.postMessage('{"act" : "show_help","widget_id" : "' + widget_id + '", "help_w" : "' + help_w + '", "help_h" : "' + help_h + '"}', '*');
+
+    // Internet Explorer 6-11
+    var isIE = /*@cc_on!@*/ false || !!document.documentMode;
+
+    // setTimeout переопределение help_h
+    if ($(window)[0].screen.width <= 480 && !isIE) {
+        setTimeout(function () {
+            CloseHelp();
+            help_h = $('#widget_help_tmp').outerHeight();
+            parent.window.postMessage('{"act" : "show_help","widget_id" : "' + widget_id + '", "help_w" : "' + help_w + '", "help_h" : "' + help_h + '"}', '*');
+            $('.widget_help').show('fade');
+        }, 500)
+    } else {
+        $('.widget_help').show('fade');
+    }
+
+    if (!b_ignore) {
+        cnt_showed_help++;
+    }
+}
+
+function CloseHelp(callback, duration) {
+    if (!duration) {
+        duration = animation_speed;
+    }
+    if (!callback) {
+        callback = function () {}
+    }
+    if (!b_help || !$('#widget_help_container:visible').length) {
+        if (duration <= 1) {
+            return callback();
+        } else {
+            return setTimeout(function () {
+                callback()
+            }, duration);
+        }
+    }
+    $('.widget_help').hide('fade', {}, duration, callback);
+}
+
+function ShowHelp() {
+    if (!b_help)
+        return;
+    if (b_help_type == 'now') {
+        ShowHelp_();
+    } else if (b_help_type == 'time') {
+        setTimeout(function () {
+            if (b_open_widget)
+                return;
+            ShowHelp_();
+        }, help_time * 1000);
+    } else if (b_help_type == 'hover' && !b_init_hover) {
+        var isSafari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
+        var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+        if ((isSafari && iOS) || navigator.userAgent.match(/Android/i)) {
+            return;
+        }
+        b_init_hover = true;
+
+        var b_hover = false;
+        // fixed 10.07.20
+        var showClear;
+        $(".widget_init_button").hover(
+            function () {
+                if (b_hover) {
+                    return;
+                }
+
+                showClear = setTimeout(function () {
+                    ShowHelp_(true);
+                }, 200);
+            },
+            function () {
+                clearInterval(showClear)
+                // console.log('123456', b_hover, !b_help)
+                if (b_hover) {
+                    return;
+                }
+                if (!b_help)
+                    return;
+                $('.widget_help').hide('fade');
+                if (!b_open_widget) {
+                    parent.window.postMessage('{"act" : "update_size_btn","widget_id" : "' + widget_id + '"}', '*');
+                }
+            }
+        );
+    }
+}
+
+function YaTarget(target) {
+    parent.window.postMessage('{"act" : "yaReachGoal","widget_id" : "' + widget_id + '", "target":"' + target + '"}', '*');
+
+}
+if (window.addEventListener) {
+    window.addEventListener("message", listener);
+} else {
+    // IE8
+    window.attachEvent("onmessage", listener);
+}

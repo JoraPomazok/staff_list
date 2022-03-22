@@ -1,0 +1,214 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+    font-family: 'helveticaregular';
+    src: url('../fonts/helvetica.eot');
+    src: url('../fonts/helvetica.svg#helveticaregular') format('svg'),
+    url('../fonts/helvetica.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/helvetica.woff') format('woff'),
+    url('../fonts/helvetica.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'helveticaneuecyrbold';
+    src: url('../fonts/helveticaneuecyr-bold.eot');
+    src: url('../fonts/helveticaneuecyr-bold.svg#helveticaneuecyrbold') format('svg'),
+    url('../fonts/helveticaneuecyr-bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/helveticaneuecyr-bold.woff') format('woff'),
+    url('../fonts/helveticaneuecyr-bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'helveticaneuecyritalic';
+    src: url('../fonts/helveticaneuecyr-italic.eot');
+    src: url('../fonts/helveticaneuecyr-italic.svg#helveticaneuecyritalic') format('svg'),
+    url('../fonts/helveticaneuecyr-italic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/helveticaneuecyr-italic.woff') format('woff'),
+    url('../fonts/helveticaneuecyr-italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+}
+
+html, body {
+    width: 100%;
+	height: 100%;
+	background: #f7f7f7;
+	position: relative;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    min-width: 440px;
+}
+
+#content {
+    width: 391px;
+    height: 436px;
+	position: absolute;
+	left: 60%;
+	top: 50%;
+	margin-left: -241px;
+	margin-top: -260px;
+	font-family: Helvetica, Arial, 'helveticaregular';
+}
+
+
+#content h2, p {
+	font-family: Helvetica, Arial, 'helveticaregular';
+	font-size: 16px;
+	color: #626262;
+	line-height: 24px;
+	text-align: center;
+	font-weight: normal;
+}
+
+#content .container {
+	width: 339px;
+	padding: 25px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	border: 1px solid #ddd;
+	background: #fff;
+	border-radius: 5px;
+}
+
+#content .container ul {
+	width: 351px;
+	height: 80px;
+	padding-bottom: 20px;
+}
+
+#content .container ul li {
+	display: inline-block;
+	width: 100px;
+	height: 82px;
+	background: #fbfbfb;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	margin-right: 12px;
+	vertical-align: top;
+	cursor: pointer;
+}
+
+#content .container ul li i {
+	font-size: 30px;
+	text-align: center;
+	line-height: 38px;
+	width: 100%;
+	color: #d7d7d7;
+	padding-top: 10px;
+}
+
+#content .container ul li p {
+	color: #d7d7d7;
+	font-size: 14px;
+}
+
+#content .container ul li:hover {
+	background: #fff;
+}
+
+#content .container ul .great.active {
+	border: 1px solid #99c06e;
+	background: #f5ffeb;
+}
+
+#content .container ul .great.active p,
+#content .container ul .great.active i {
+	color:#99c06e;
+}
+
+#content .container ul .not_bad.active {
+	border: 1px solid #e9ac42;
+	background: #fff7ea;
+}
+
+#content .container ul .not_bad.active p,
+#content .container ul .not_bad.active i {
+	color: #e9ac42;
+}
+
+#content .container ul .poor.active {
+	border: 1px solid #f58585;
+	background: #fff5f5;
+}
+
+#content .container ul .poor.active p,
+#content .container ul .poor.active i {
+	color: #f58585;
+}
+
+
+#content .container textarea {
+	padding: 13px 15px 15px 15px;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	resize: none;
+	background: #fbfbfb;
+	width: 307px;
+	height: 128px;
+	font-family: Helvetica, Arial, 'helveticaregular';
+	font-size: 15px;
+	line-height: 19px;
+	margin-bottom: 20px;
+	display: block;
+}
+
+
+#content .container button {
+	height: 44px;
+    line-height: 46px;
+	font-family: Helvetica Bold, Arial Bold,'helveticaneuecyrbold';
+	font-size: 14px;
+	background: #74ba6c;
+	color: #fff;
+	width: 100%;
+	border-radius: 3px;
+	border: none;
+	display: block;
+	cursor: pointer;
+}
+
+#content .container button i {
+	font-size: 24px;
+	vertical-align: -2px;
+}
+
+
+/* second page */
+#thanks {
+	width: 400px;
+	height: 180px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -200px;
+	margin-top: -90px;
+	font-family: Helvetica, Arial, 'helveticaregular';
+	text-align: center;
+}
+
+#thanks i {
+	font-size: 122px;
+	color: #99c06e;
+	text-align: center;
+	line-height: 82px;
+}
+
+#thanks p {
+	font-family: Helvetica, Arial, 'helveticaregular';
+	font-size: 18px;
+	color: #626262;
+	line-height: 28px;
+	text-align: center;
+	margin-top: 36px;
+}
