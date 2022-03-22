@@ -1,0 +1,183 @@
+/* redactor.css :320 */
+
+.redactor-toolbar {
+	border: 1px solid #CDCDCD;
+	border-bottom: 1px solid #CDCDCD;
+}
+
+.redactor-source-view .redactor-toolbar {
+	background: #252525;
+	border: 1px solid #666;
+	border-bottom: 1px solid #666;
+}
+
+.redactor-source-view .redactor-toolbar a {
+    border-right: 1px solid #666;
+}
+
+.redactor-source-view .redactor-toolbar a.redactor-button-disabled {
+    color: #636363 !important;
+}
+
+.redactor-source-view .redactor-toolbar a.redactor-button-active {
+	color: #fff !important;
+}
+
+.redactor-toolbar li a {
+	padding: 9px 10px !important;
+}
+
+.mac.mozilla .redactor-toolbar li a {
+	line-height: 13px;
+	height: 14px;
+}
+
+/* redactor.css :121 */
+
+.redactor-editor {
+	padding: 12px 14px;
+	font-size: 14px;
+	line-height: 18px;
+	border-top: none;
+}
+
+.redactor-editor div, 
+.redactor-editor p, 
+.redactor-editor ul, 
+.redactor-editor ol, 
+.redactor-editor table {
+	margin-bottom: 10px !important;
+}
+
+/* redactor.css :84 */
+
+body .redactor-box-fullscreen {
+	position: fixed;
+	top: -1px;
+	width: 100%;
+}
+
+.redactor-box-fullscreen .redactor-editor {
+	padding: 12px 14px !important;
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.redactor-box textarea {
+	/*width: 97.7%;*/
+	padding: 4px 8px;
+}
+
+.redactor-box-fullscreen textarea {
+	width: 100%;
+}
+
+.ck_editor-signature .redactor-box {
+	margin-bottom: 0px;
+}
+
+.ck_editor-signature {
+  padding: 7px 8px 8px 9px;
+}
+
+#redactor-modal-video-insert {
+	padding: 12px 48px 30px 30px !important;
+}
+
+/* redactor.css :121 */
+
+.redactor-editor {
+	padding-top: 24px;
+	font-size: 14px;
+	line-height: 18px;
+	padding-bottom: 0;
+	padding-left: 0;
+	padding-right: 0;
+	border: none;
+	font-family: Helvetica, Helvetica Neue, Arial, sans-serif !important;
+}
+
+.mac.mozilla .redactor-editor {
+	padding-top: 26px;
+}
+
+/* redactor.css :84 */
+
+body .redactor-box-fullscreen {
+	position: fixed;
+	top: 50px;
+	left: 0px;
+	width: 100%;
+	margin: -16px;
+	padding-left: 15px;
+}
+
+.redactor-box-fullscreen .redactor-layer {
+	padding: 15px 15px 105px 15px !important;
+}
+
+.redactor-box-fullscreen .redactor-editor {
+	padding-right: 14px;
+}
+
+.redactor-editor p {
+	margin-bottom: 1em;
+}
+
+.redactor-box {
+	margin-bottom: 0px;
+}
+
+.add-tmpl-cont .modal-cont.variable-modal-cont {
+	-webkit-border-radius: 0px !important;
+	-moz-border-radius: 0px !important;
+	border-radius: 0px !important;
+	/*margin-top: -408px !important;*/
+}
+
+.ck_editor-signature {
+	padding: 7px 8px 8px 9px;
+}
+.ck_editor-signature-staff  .redactor-layer {
+	padding: 7px 8px 8px 9px;
+}
+.ck_editor-signature-staff .redactor-toolbar,
+.win.webkit .ck_editor-signature-staff .redactor-toolbar
+{
+	margin:0 !important;
+}
+
+.redactor-toolbar a,
+.redactor-air a {
+	display: inline-block;
+	box-sizing: border-box;
+	font-size: 14px;
+	text-align: center;
+	padding: 10px 15px 9px 15px;
+	cursor: pointer;
+	outline: none;
+	border-right: 1px solid #eee;
+	vertical-align: middle;
+	text-decoration: none;
+	zoom: 1;
+	position: relative;
+	color: rgba(0, 0, 0, 0.85);
+	border-radius: 0px !important;
+	background: rgba(255, 255, 255, 0.97);
+	box-shadow: none !important;
+	margin-right: 0 !important;
+	margin-bottom: 0 !important;
+}
+
+.redactor-toolbar a.re-button-icon,
+.redactor-air a.re-button-icon {
+	font-size: 15px;
+	padding: 12px 12px 10px 12px;
+}
+
+.redactor-toolbar a:hover,
+.redactor-air a:hover {
+	outline: none;
+	color: #000;
+	background: #E2F7FF;
+}

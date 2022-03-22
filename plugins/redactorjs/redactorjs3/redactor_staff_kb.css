@@ -1,0 +1,128 @@
+/* redactor.css :320 */
+
+.redactor-toolbar {
+  border: 1px solid #dadada;
+  border-bottom: 1px solid #dadada;
+}
+
+.redactor-toolbar li a {
+  padding: 9px 10px;
+}  
+
+.mac.mozilla .redactor-toolbar li a {
+  line-height: 12px;
+  height: 14px;
+}
+
+/* redactor.css :121 */
+
+.redactor-editor {
+  padding: 12px 14px;
+  font-size: 14px;
+  line-height: 18px;
+  border-top: none;
+}
+
+.redactor-editor div, 
+.redactor-editor p, 
+.redactor-editor ul, 
+.redactor-editor ol, 
+.redactor-editor table {
+	margin-bottom: 10px !important;
+}
+
+/* redactor.css :84 */
+
+body .redactor-box-fullscreen {
+  position: fixed;
+  top: 48px;
+  width: 100%;
+}
+
+.redactor-box-fullscreen .redactor-editor {
+	padding: 12px 14px;
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.redactor-box textarea {
+	width: 100%;
+	padding: 4px 8px;
+}
+
+.redactor-box-fullscreen textarea {
+	width: 100%;
+}
+
+#redactor-modal-video-insert {
+	padding: 12px 30px 30px 30px !important;
+}
+
+#redactor-modal-image-insert {
+	padding: 12px 30px 30px 30px !important;
+}
+
+.redactor-toolbar a,
+.redactor-air a {
+      display: inline-block;
+      box-sizing: border-box;
+      font-size: 14px;
+      text-align: center;
+      padding: 10px 15px 9px 15px;
+      cursor: pointer;
+      outline: none;
+      border-right: 1px solid #eee;
+      vertical-align: middle;
+      text-decoration: none;
+      zoom: 1;
+      position: relative;
+      color: rgba(0, 0, 0, 0.85);
+      border-radius: 0px !important;
+      background: rgba(255, 255, 255, 0.97);
+      box-shadow: none !important;
+      margin-right: 0 !important;
+      margin-bottom: 0 !important;
+}
+
+.redactor-toolbar a.re-button-icon,
+.redactor-air a.re-button-icon {
+  font-size: 15px;
+  padding: 12px 12px 10px 12px;
+}
+
+.redactor-toolbar a:hover,
+.redactor-air a:hover {
+  outline: none;
+  color: #000;
+  background: #E2F7FF; 
+}
+
+.redactor-toolbar a.redactor-button-disabled, 
+.redactor-air a.redactor-button-disabled {
+    opacity: 1;
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.redactor-box-fullscreen .redactor-toolbar.redactor-toolbar-fixed {
+	top: 48px !important;
+}
+
+.redactor-box-fullscreen .redactor-layer {
+	margin: -10px 15px 50px 15px;
+}
+
+.redactor-source-view .redactor-toolbar a.redactor-button-disabled {
+	color: #636363 !important;
+}
+.redactor-source-view .redactor-toolbar a.redactor-button-active {
+	color: #fff !important;
+}
+
+.redactor-source-view .redactor-toolbar {
+    border: 1px solid #666;
+    border-bottom: 1px solid #666;
+}
+
+.redactor-source-view .redactor-toolbar a {
+	border-right: 1px solid #666;
+}

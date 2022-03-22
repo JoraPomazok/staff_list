@@ -1,0 +1,34 @@
+/* redactor.css :320 */
+
+.redactor-toolbar {
+	border: 1px solid #CDCDCD;
+	border-bottom: 1px solid #CDCDCD;
+}
+
+/* redactor.css :121 */
+
+.redactor-editor {
+	padding: 12px 14px;
+	font-size: 14px;
+	line-height: 18px;
+	border-top: none;
+	color: #000;
+}
+
+/* redactor.css :84 */
+
+body .redactor-box-fullscreen {
+	position: fixed;
+	top: 64px;
+	width: 100%;
+	margin: -16px;
+	padding-left: 16px;
+}
+
+.redactor-box-fullscreen .redactor-editor {
+	padding: 12px 14px 17px;
+}
+
+.redactor-layer {
+	padding: 20px;
+}

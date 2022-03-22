@@ -1,0 +1,67 @@
+/* redactor.css :320 */
+
+.redactor-toolbar {
+	border: 1px solid #CDCDCD;
+	border-bottom: 1px solid #CDCDCD;
+}
+
+.redactor-toolbar li a {
+	padding: 9px 10px !important;
+}
+
+.mac.mozilla .redactor-toolbar li a {
+	line-height: 13px;
+	height: 14px;
+}
+
+/* redactor.css :121 */
+
+.redactor-editor {
+	padding: 12px 14px;
+	font-size: 14px;
+	line-height: 18px;
+	border-top: none;
+}
+
+.redactor-editor div, 
+.redactor-editor p, 
+.redactor-editor ul, 
+.redactor-editor ol, 
+.redactor-editor table {
+	margin-bottom: 10px !important;
+}
+
+/* redactor.css :84 */
+
+body .redactor-box-fullscreen {
+	position: fixed;
+	top: -1px;
+	width: 100%;
+}
+
+.redactor-box-fullscreen .redactor-editor {
+	padding: 12px 14px !important;
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.redactor-box textarea {
+	width: 97.7%;
+	padding: 4px 8px;
+}
+
+.redactor-box-fullscreen textarea {
+	width: 100%;
+}
+
+.ck_editor-signature .redactor-box {
+	margin-bottom: 0px;
+}
+
+.ck_editor-signature {
+  padding: 7px 8px 8px 9px;
+}
+
+#redactor-modal-video-insert {
+	padding: 12px 48px 30px 30px !important;
+}

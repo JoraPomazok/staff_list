@@ -1,0 +1,78 @@
+/*
+.redactor-editor {
+	overflow: auto;
+	border: none;
+	padding: 0px;
+	color: #000;
+}
+
+.row-ckeditor .redactor-box {
+	margin-bottom: 0px;
+}
+*/
+
+.row-ckeditor .redactor-box {
+	margin-bottom: 0px;
+	margin: -8px -10px;
+}
+
+.redactor-editor {
+	overflow: auto;
+	border: 1px solid #ccc;
+	border-top: none;
+	padding: 7px 10px;
+	color: #000;
+}
+
+.acrItem .letters_content textarea {
+	width: 98.8%;
+	margin: 0px;
+}
+
+.ck_editor-signature .redactor-toolbar {
+	display: none;
+}
+
+.ck_editor-signature .redactor-editor, 
+.mac.mozilla .ck_editor-signature .redactor-editor {
+	border: none !important;
+	padding: 0px 0px;
+}
+
+.add-tmpl-cont .ck_editor-signature .redactor-toolbar {
+	display: block;
+}
+
+.add-tmpl-cont .redactor-box {
+	margin-bottom: 0px;
+	margin: -10px -9px -10px -10px;
+}
+
+.add-tmpl-cont .redactor-toolbar, 
+.mac.mozilla .add-tmpl-cont .redactor-toolbar,
+.win.webkit .add-tmpl-cont .redactor-toolbar {
+	margin: -1px 0px !important;
+	border: 1px solid #dadada;
+	border-bottom: 1px solid #dadada;
+}
+
+.add-tmpl-cont .redactor-toolbar li a {
+	padding: 9px 10px  !important;
+	border-right: 1px solid #E0E0E0;
+}
+
+.add-tmpl-cont .redactor-editor, 
+.mac.mozilla .add-tmpl-cont .redactor-editor,
+.win.webkit .add-tmpl-cont .redactor-editor {
+	border: 1px solid #dadada !important;
+	padding: 7px 10px;
+}
+
+.redactor-box-fullscreen .redactor-toolbar li a {
+	padding: 9px 10px;
+}
+
+.redactor-box-fullscreen .redactor-editor {
+	border: none;
+	padding: 24px 24px 0px 0px;
+}
